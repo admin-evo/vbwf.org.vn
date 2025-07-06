@@ -11,9 +11,9 @@ import {
   SearchIcon,
 } from "@/icons";
 import { pathNames } from "@/utils/pathNames";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import IconBox from "../IconBox";
 import ImageBox from "../ImageBox";
 import { NavItem } from "../Nav";
@@ -27,12 +27,36 @@ const navItems: NavItem[] = [
 ];
 
 const HeaderMobile = () => {
-  const [showNav, setShowNav] = React.useState(false);
+  const [showNav, setShowNav] = useState(false);
+  const [prevScrollY, setPrevScrollY] = useState(0);
+  const controls = useAnimation();
+
   const toggleNav = () => setShowNav((prev) => !prev);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > prevScrollY && currentScrollY > 80) {
+        controls.start({ y: "-100%", transition: { duration: 0.3 } });
+      } else {
+        controls.start({ y: "0%", transition: { duration: 0.3 } });
+      }
+
+      setPrevScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollY, controls]);
 
   return (
     <>
-      <div className="flex flex-row items-center px-3 justify-between h-24 relative overflow-hidden">
+      <motion.div
+        animate={controls}
+        initial={{ y: 0 }}
+        className="flex flex-row items-center px-4 justify-between h-24 fixed top-0 left-0 right-0 z-50 bg-white shadow-md"
+      >
         <IconBox
           icon={<NavIcon />}
           className="cursor-pointer"
@@ -46,7 +70,8 @@ const HeaderMobile = () => {
           />
         </Link>
         <IconBox icon={<SearchIcon />} className="cursor-pointer" />
-      </div>
+      </motion.div>
+
       <AnimatePresence>
         {showNav && (
           <>

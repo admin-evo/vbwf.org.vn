@@ -7,6 +7,14 @@ import ArrowDownIcon from "./arrow-down.svg";
 import SearchIcon from "./search.svg";
 import NavIcon from "./nav-icon.svg";
 import CloseIcon from "./close.svg";
+import AboutIcon1 from "./about-1.svg";
+import AboutIcon2 from "./about-2.svg";
+import IncomingIcon1 from "./incoming-1.svg";
+import IncomingIcon2 from "./incoming-2.svg";
+import IncomingIcon3 from "./incoming-3.svg";
+import IncomingIcon4 from "./incoming-4.svg";
+import IncomingIcon5 from "./incoming-5.svg";
+import IncomingIcon6 from "./incoming-6.svg";
 
 export {
   HomeIcon,
@@ -18,4 +26,12 @@ export {
   SearchIcon,
   NavIcon,
   CloseIcon,
+  AboutIcon1,
+  AboutIcon2,
+  IncomingIcon1,
+  IncomingIcon2,
+  IncomingIcon3,
+  IncomingIcon4,
+  IncomingIcon5,
+  IncomingIcon6,
 };

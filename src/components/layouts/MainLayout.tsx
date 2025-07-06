@@ -11,13 +11,13 @@ const MainLayout = (props: Props) => {
   const { children } = props;
   return (
     <div>
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <Header />
       </div>
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <HeaderMobile />
       </div>
-      <main>{children}</main>
+      <main className="mt-24">{children}</main>
       <Footer />
     </div>
   );

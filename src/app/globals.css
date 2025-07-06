@@ -21,3 +21,7 @@ html {
     font-size: 0.75rem;
   }
 }
+
+:root {
+  --color-primary: #e74c3c;
+}
