@@ -17,7 +17,12 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const navItems: NavItem[] = [
-  { label: "Trang chủ", leftIcon: <HomeIcon />, path: pathNames.HOME_PAGE },
+  {
+    label: "Trang chủ",
+    leftIcon: <HomeIcon />,
+    path: pathNames.HOME_PAGE,
+    options: { rightIcon: { hide: true } },
+  },
   { label: "Khoá học", leftIcon: <CourseIcon />, path: "/" },
   { label: "Tin tức", leftIcon: <BlogIcon />, path: "/" },
   { label: "Hội nghị", leftIcon: <ConferenceIcon />, path: "/" },

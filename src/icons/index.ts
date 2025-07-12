@@ -15,6 +15,10 @@ import IncomingIcon3 from "./incoming-3.svg";
 import IncomingIcon4 from "./incoming-4.svg";
 import IncomingIcon5 from "./incoming-5.svg";
 import IncomingIcon6 from "./incoming-6.svg";
+import PhoneIcon from "./phone.svg";
+import EmailIcon from "./email.svg";
+import HomeGrayIcon from "./home-gray.svg";
+import ArrowRightIcon from "./arrow-right.svg";
 
 export {
   HomeIcon,
@@ -34,4 +38,8 @@ export {
   IncomingIcon4,
   IncomingIcon5,
   IncomingIcon6,
+  PhoneIcon,
+  EmailIcon,
+  HomeGrayIcon,
+  ArrowRightIcon,
 };
