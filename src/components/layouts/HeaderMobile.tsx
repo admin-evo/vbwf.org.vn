@@ -1,35 +1,29 @@
 "use client";
-import {
-  ArrowDownIcon,
-  BlogIcon,
-  CloseIcon,
-  ConferenceIcon,
-  CourseIcon,
-  EventIcon,
-  HomeIcon,
-  NavIcon,
-  SearchIcon,
-} from "@/icons";
+import { ArrowDownIcon, CloseIcon, NavIcon, SearchIcon } from "@/icons";
 import { pathNames } from "@/utils/pathNames";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import IconBox from "../IconBox";
 import ImageBox from "../ImageBox";
 import { NavItem } from "../Nav";
+import { usePathname } from "next/navigation";
 
 const navItems: NavItem[] = [
-  { label: "Trang chủ", leftIcon: <HomeIcon />, path: pathNames.HOME_PAGE },
-  { label: "Khoá học", leftIcon: <CourseIcon />, path: "/" },
-  { label: "Tin tức", leftIcon: <BlogIcon />, path: "/" },
-  { label: "Hội nghị", leftIcon: <ConferenceIcon />, path: "/" },
-  { label: "Sự kiện", leftIcon: <EventIcon />, path: "/" },
+  {
+    label: "Trang chủ",
+    path: pathNames.HOME_PAGE,
+  },
+  { label: "Khoá học", path: pathNames.COURSE_PAGE },
+  { label: "Tin tức", path: pathNames.POSTS_PAGE },
+  { label: "Sản phẩm", path: pathNames.PRODUCTS_PAGE },
 ];
 
 const HeaderMobile = () => {
   const [showNav, setShowNav] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
   const controls = useAnimation();
+  const pathname = usePathname();
 
   const toggleNav = () => setShowNav((prev) => !prev);
 
@@ -96,15 +90,25 @@ const HeaderMobile = () => {
                 </button>
               </div>
 
-              <nav className="flex flex-col space-y-4">
+              <nav className="flex flex-col space-y-4 ">
                 {navItems.map((item, index) => (
-                  <Link key={index} href={item.path} className="h-full">
+                  <Link key={index} href={item.path} className={`h-full`}>
                     <div className="flex flex-row items-center justify-between cursor-pointer hover:opacity-75 h-full py-1">
                       <div className="flex flex-row gap-1">
                         {item.leftIcon}
-                        <p className="text-sm uppercase">{item.label}</p>
+                        <p
+                          className={`text-sm uppercase ${
+                            pathname === item.path && "font-bold"
+                          }`}
+                        >
+                          {item.label}
+                        </p>
                       </div>
-                      <ArrowDownIcon />
+                      <ArrowDownIcon
+                        className={`transition-transform duration-300 ${
+                          pathname === item?.path ? "rotate-180" : "rotate-0"
+                        }`}
+                      />
                     </div>
                   </Link>
                 ))}

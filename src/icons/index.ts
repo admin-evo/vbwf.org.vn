@@ -19,6 +19,9 @@ import PhoneIcon from "./phone.svg";
 import EmailIcon from "./email.svg";
 import HomeGrayIcon from "./home-gray.svg";
 import ArrowRightIcon from "./arrow-right.svg";
+import CilEducationIcon from "./cil-education.svg";
+import UserIcon from "./user.svg";
+import ArrowUpRightIcon from "./arrow-up-right.svg";
 
 export {
   HomeIcon,
@@ -42,4 +45,7 @@ export {
   EmailIcon,
   HomeGrayIcon,
   ArrowRightIcon,
+  CilEducationIcon,
+  ArrowUpRightIcon,
+  UserIcon,
 };

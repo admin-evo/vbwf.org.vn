@@ -41,12 +41,11 @@ const pages = [
 const Footer = () => {
   return (
     <>
-      <div className="h-32 bg-[#2D2D2D] mt-10" />
-      <div className="bg-[#313131]">
+      <div className="bg-[#002843] md:pb-0 pb-[20rem]">
         <div className="lg:px-0 md:mx-48 mx-6">
           <div className="grid md:grid-cols-3 grid-cols-1 gap-[1.875rem]  py-[3.75rem]">
             <div>
-              <h3 className="text-[#e74c3c] uppercase text-base border-b border-[#454545] py-3 mb-5">
+              <h3 className="text-[#FF9F2C] uppercase text-base border-b border-[#454545] py-3 mb-5">
                 liên đoàn cử tạ thể hình vn
               </h3>
               <p className="text-xs text-[#8F8F8F]">
@@ -66,7 +65,7 @@ const Footer = () => {
             </p>
           </div> */}
             <div>
-              <h3 className="text-[#e74c3c] uppercase text-base border-b border-[#454545] py-3 mb-5">
+              <h3 className="text-[#FF9F2C] uppercase text-base border-b border-[#454545] py-3 mb-5">
                 Trang
               </h3>
               <div>
@@ -82,7 +81,7 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-[#e74c3c] uppercase text-base border-b border-[#8F8F8F] py-3 mb-5">
+              <h3 className="text-[#FF9F2C] uppercase text-base border-b border-[#8F8F8F] py-3 mb-5">
                 liên hệ
               </h3>
               <div>
@@ -103,11 +102,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="bg-[#2D2D2D] text-center py-[1.875rem]">
-        <p className="text-[#8F8F8F] text-base">
-          Copyright © 2025 EVO VIETNAM. All rights reserved
-        </p>
       </div>
     </>
   );
