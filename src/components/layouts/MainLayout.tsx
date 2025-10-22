@@ -10,7 +10,7 @@ type Props = {
 const MainLayout = (props: Props) => {
   const { children } = props;
   return (
-    <div>
+    <div className="bg-[#f2f2f7]">
       <div className="hidden lg:block">
         <Header />
       </div>

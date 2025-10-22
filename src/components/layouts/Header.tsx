@@ -1,32 +1,22 @@
 "use client";
 
-import {
-  BlogIcon,
-  ConferenceIcon,
-  CourseIcon,
-  EventIcon,
-  HomeIcon,
-  SearchIcon,
-} from "@/icons";
+import { SearchIcon } from "@/icons";
 import { pathNames } from "@/utils/pathNames";
+import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import IconBox from "../IconBox";
 import ImageBox from "../ImageBox";
 import Nav, { NavItem } from "../Nav";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
 
 const navItems: NavItem[] = [
   {
     label: "Trang chủ",
-    leftIcon: <HomeIcon />,
     path: pathNames.HOME_PAGE,
-    options: { rightIcon: { hide: true } },
   },
-  { label: "Khoá học", leftIcon: <CourseIcon />, path: "/" },
-  { label: "Tin tức", leftIcon: <BlogIcon />, path: "/" },
-  { label: "Hội nghị", leftIcon: <ConferenceIcon />, path: "/" },
-  { label: "Sự kiện", leftIcon: <EventIcon />, path: "/" },
+  { label: "Khoá học", path: pathNames.COURSE_PAGE },
+  { label: "Tin tức", path: pathNames.POSTS_PAGE },
+  { label: "Sản phẩm", path: pathNames.PRODUCTS_PAGE },
 ];
 
 const Header = () => {
