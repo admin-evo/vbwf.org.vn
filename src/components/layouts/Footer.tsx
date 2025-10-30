@@ -1,4 +1,5 @@
 import { ArrowRightIcon, EmailIcon, HomeGrayIcon, PhoneIcon } from "@/icons";
+import Link from "next/link";
 
 const contacts = [
   {
@@ -18,23 +19,20 @@ const contacts = [
 
 const pages = [
   {
-    text: "Tin tức",
+    text: "Trang chủ",
+    href: "/",
   },
   {
     text: "Khoá học",
-  },
-
-  {
-    text: "Hội nghị",
+    href: "/courses",
   },
   {
-    text: "Sự kiện",
+    text: "Tin tức",
+    href: "/posts",
   },
   {
-    text: "Liên hệ",
-  },
-  {
-    text: "Đăng ký",
+    text: "Sản phẩm",
+    href: "/products",
   },
 ];
 
@@ -42,7 +40,7 @@ const Footer = () => {
   return (
     <>
       <div className="bg-[#002843] md:pb-0 pb-[20rem]">
-        <div className="lg:px-0 md:mx-48 mx-6">
+        <div className="lg:px-0 md:mx-56 mx-6">
           <div className="grid md:grid-cols-3 grid-cols-1 gap-[1.875rem]  py-[3.75rem]">
             <div>
               <h3 className="text-[#FF9F2C] uppercase text-base border-b border-[#454545] py-3 mb-5">
@@ -70,13 +68,14 @@ const Footer = () => {
               </h3>
               <div>
                 {pages?.map((item, index) => (
-                  <div
-                    key={index}
-                    className="cursor-pointer flex flex-row gap-3 items-center"
-                  >
-                    <ArrowRightIcon />
-                    <span className="text-xs text-[#8F8F8F]">{item.text}</span>
-                  </div>
+                  <Link key={index} href={item.href}>
+                    <div className="cursor-pointer flex flex-row gap-3 items-center">
+                      <ArrowRightIcon />
+                      <span className="text-xs text-[#8F8F8F]">
+                        {item.text}
+                      </span>
+                    </div>
+                  </Link>
                 ))}
               </div>
             </div>

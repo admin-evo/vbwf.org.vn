@@ -21,7 +21,7 @@ const data = [
 const RegisterProcesses = () => {
   return (
     <div className="bg-white">
-      <div className="lg:px-0 md:mx-48 mx-6 py-6 ">
+      <div className="lg:px-0 md:mx-56 mx-6 py-6 ">
         <h3 className="text-[#222222] font-bold text-[1.75rem] text-center mb-6">
           Quy trình đăng ký
         </h3>

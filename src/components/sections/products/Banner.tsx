@@ -1,3 +1,5 @@
+"use client";
+import { openZalo } from "@/utils/openZalo";
 import Image from "next/image";
 import React from "react";
 
@@ -9,7 +11,10 @@ const Banner = () => {
           <h3 className="md:text-[2.25rem] text-[1.75rem] text-[#235B76] md:w-[33.625rem] font-bold">
             Thẻ NFC – Giải pháp định danh thông minh cho người dùng hiện đại
           </h3>
-          <button className="bg-[#FF9F2C] rounded-md py-2 px-4 text-white cursor-pointer hover:opacity-75 mt-6">
+          <button
+            className="bg-[#FF9F2C] rounded-md py-2 px-4 text-white cursor-pointer hover:opacity-75 mt-6"
+            onClick={openZalo}
+          >
             Đăng ký thẻ ngay
           </button>
         </div>

@@ -31,7 +31,7 @@ const data = [
 const Benefit = () => {
   return (
     <div className="bg-gradient-to-t from-[#FFFFFF] to-[#9ABBCB] md:bg-gradient-to-t md:from-[#FFFFFF] md:to-[#FFFFFF]">
-      <div className="lg:px-0 md:mx-48 mx-6 py-6">
+      <div className="lg:px-0 md:mx-56 mx-6 py-6">
         <h3 className="text-[#222222] font-bold text-[1.75rem] text-center mb-6">
           Tiện ích dành cho người dùng
         </h3>
