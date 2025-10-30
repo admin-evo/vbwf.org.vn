@@ -1,7 +1,7 @@
 import React from "react";
 
-const Page = () => {
-  return <div className="min-h-80">Courses</div>;
+const Courses = () => {
+  return <div>Courses</div>;
 };
 
-export default Page;
+export default Courses;

@@ -11,7 +11,7 @@ const data = [
 
 const NFC = () => {
   return (
-    <div className="flex md:flex-row flex-col md:gap-15 gap-6 lg:px-0 md:mx-48 mx-6 md:mt-8 mt-12">
+    <div className="flex md:flex-row flex-col md:gap-15 gap-6 lg:px-0 md:mx-56 mx-6 md:mt-8 mt-12">
       <img
         src="/assets/images/nfc/01.png"
         alt="NFC"

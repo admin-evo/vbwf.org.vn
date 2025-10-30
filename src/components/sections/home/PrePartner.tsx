@@ -31,7 +31,7 @@ const logos = [
 
 const PrePartner = () => {
   return (
-    <div className="lg:px-0 md:mx-48 mx-6 mb-11 md:mt-20 mt-12">
+    <div className="lg:px-0 md:mx-56 mx-6 mb-11 md:mt-20 mt-12">
       <h3 className="text-[#222222] font-bold text-[1.75rem] text-center mb-6">
         Đối tác liên kết
       </h3>

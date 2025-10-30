@@ -1,9 +1,19 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.vbwf.org.vn",
+        port: "",
+        pathname: "/resources/images/**",
+      },
+    ],
+  },
   webpack(config) {
-    const fileLoaderRule = config.module.rules.find(
-      (rule: any) => rule.test?.test?.('.svg')
+    const fileLoaderRule = config.module.rules.find((rule: any) =>
+      rule.test?.test?.(".svg")
     ) as any;
 
     config.module.rules.push(
@@ -15,8 +25,10 @@ const nextConfig: NextConfig = {
       {
         test: /\.svg$/i,
         issuer: fileLoaderRule.issuer,
-        resourceQuery: { not: [...(fileLoaderRule.resourceQuery?.not || []), /url/] },
-        use: ['@svgr/webpack'],
+        resourceQuery: {
+          not: [...(fileLoaderRule.resourceQuery?.not || []), /url/],
+        },
+        use: ["@svgr/webpack"],
       }
     );
 

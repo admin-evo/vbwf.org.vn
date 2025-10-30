@@ -1,3 +1,5 @@
+"use client";
+import { openZalo } from "@/utils/openZalo";
 import Image from "next/image";
 
 const data = [
@@ -44,7 +46,10 @@ const Pricing = () => {
   return (
     <div className="bg-[#DDE8EE] pb-12">
       <div className="lg:px-0 md:mx-64 mx-6 py-6">
-        <h3 className="text-[#222222] font-bold text-[1.75rem] text-center mb-6">
+        <h3
+          className="text-[#222222] font-bold text-[1.75rem] text-center mb-6"
+          onClick={openZalo}
+        >
           Đăng ký gói
         </h3>
         <div className="grid md:grid-cols-3 grid-cols-1 items-center justify-center gap-6">
@@ -56,12 +61,12 @@ const Pricing = () => {
               <div className="bg-[#9ABBCB] text-white text-[0.625rem] rounded-full px-4 py-1.5 mb-6 w-fit ml-auto">
                 Nổi bậc nhất
               </div>
-              <div className="flex items-center justify-center mb-3">
+              {/* <div className="flex items-center justify-center mb-3">
                 <span className="text-[2.25rem] text-[#002843] font-bold">
                   {item?.price}
                 </span>
                 <span className="text-[#002843] text-[1.125rem]">/tháng</span>
-              </div>
+              </div> */}
               <div className="text-[1.75rem] text-[#002843] font-bold mb-2.5">
                 {item?.title}
               </div>
@@ -84,7 +89,10 @@ const Pricing = () => {
                 ))}
               </div>
 
-              <button className="bg-[#FF9F2C] rounded-md py-2 px-4 text-white cursor-pointer hover:opacity-75 mt-6 w-fit mx-auto">
+              <button
+                className="bg-[#FF9F2C] rounded-md py-2 px-4 text-white cursor-pointer hover:opacity-75 mt-6 w-fit mx-auto"
+                onClick={openZalo}
+              >
                 Đăng ký
               </button>
             </div>

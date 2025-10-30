@@ -28,13 +28,16 @@ const lectureres = [
 
 const PreLecturers = () => {
   return (
-    <div className="lg:px-0 md:mx-48 mx-6">
+    <div className="lg:px-0 md:mx-56 mx-6">
       <h3 className="text-[#222222] font-bold text-[1.75rem] text-center mb-6">
         Đội ngũ giảng viên
       </h3>
       <div className="grid md:grid-cols-4 grid-cols-2 items-center justify-center md:gap-[1.875rem] gap-6">
         {lectureres?.map((item, index) => (
-          <div key={index} className="w-full bg-white p-3 min-h-[29rem]">
+          <div
+            key={index}
+            className="w-full bg-white p-4 min-h-[29rem] rounded-md"
+          >
             <img
               src={item.src}
               alt={item.name}

@@ -1,4 +1,6 @@
+"use client";
 import { CilEducationIcon } from "@/icons";
+import { openZalo } from "@/utils/openZalo";
 
 /* eslint-disable @next/next/no-img-element */
 const Incoming = () => {
@@ -22,7 +24,10 @@ const Incoming = () => {
             <p className="text-[#D1D1D6] text-xs mt-1 mb-4">
               Nâng cấp kỹ năng – Học nhanh – Ứng dụng liền
             </p>
-            <div className="bg-[#FF9F2C] hover:bg-[#FFB256] w-fit px-4 py-2 rounded-md text-white text-sm cursor-pointer">
+            <div
+              className="bg-[#FF9F2C] hover:bg-[#FFB256] w-fit px-4 py-2 rounded-md text-white text-sm cursor-pointer"
+              onClick={openZalo}
+            >
               Đăng ký
             </div>
           </div>
