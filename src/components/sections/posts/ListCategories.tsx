@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-const categories = [
+export const categories = [
   { id: null, title: "Tất cả" },
   { id: 1, title: "Tin tức" },
   { id: 2, title: "Cơ hội" },
@@ -24,7 +24,7 @@ const ListCategories = (props: Props) => {
   }, [onChange, selectedCategory]);
 
   return (
-    <div className="flex flex-row gap-4 py-6">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-4 py-6">
       {categories.map((item) => (
         <div
           key={item.id}

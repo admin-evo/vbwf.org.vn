@@ -6,6 +6,7 @@ export enum QueryParam {
   KEY_WORD = "keyword",
   CATALOG = "catalog",
   STATUS = "status",
+  IGNORE_UUID = "ignoreUuid",
 }
 
 export const QueryValue = {

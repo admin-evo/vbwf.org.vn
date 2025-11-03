@@ -22,3 +22,17 @@ export interface Post {
   status?: number | undefined;
   uuid?: string | undefined;
 }
+
+export interface PostDetails {
+  title?: string | undefined;
+  content?: string | undefined;
+  catalog?: number | undefined;
+  view?: number | undefined;
+  timePublic?: string | undefined;
+  link?: string | undefined;
+  imagePath?: string | undefined;
+  countComment?: number | undefined;
+  status?: number | undefined;
+  uuid?: string | undefined;
+  blockComment?: boolean | undefined;
+}

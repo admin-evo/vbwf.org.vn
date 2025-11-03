@@ -59,7 +59,7 @@ const Pricing = () => {
               className="flex flex-col bg-white p-6 rounded-2xl shadow hover:shadow-2xl"
             >
               <div className="bg-[#9ABBCB] text-white text-[0.625rem] rounded-full px-4 py-1.5 mb-6 w-fit ml-auto">
-                Nổi bậc nhất
+                Nổi bật nhất
               </div>
               {/* <div className="flex items-center justify-center mb-3">
                 <span className="text-[2.25rem] text-[#002843] font-bold">
