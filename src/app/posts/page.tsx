@@ -6,7 +6,9 @@ import { Post } from "@/types";
 import { apiEndpoints, ITEMS_PER_PAGE } from "@/utils/constants";
 import { formatDate } from "@/utils/formatDate";
 import { getImage } from "@/utils/getImage";
+import { navigateToPostDetails } from "@/utils/navigate";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Page = () => {
@@ -21,6 +23,7 @@ const Page = () => {
     queryParams: [QueryParam.KEY_WORD, QueryParam.CATALOG, QueryParam.STATUS],
     queryValues: [keyword, catalogId, QueryValue.STATUS_ACTIVE],
   });
+  const router = useRouter();
 
   const otherPosts = React.useMemo(() => {
     if (page === 1) return posts?.slice(1, posts?.length);
@@ -51,7 +54,8 @@ const Page = () => {
               alt={coverPost?.title || "No title"}
               width={926}
               height={624}
-              className="w-full h-auto object-contain rounded-md"
+              className="w-full h-auto object-contain rounded-md cursor-pointer"
+              onClick={() => navigateToPostDetails(router, coverPost?.uuid)}
             />
           ) : (
             <div className="w-full h-96" />
@@ -69,7 +73,10 @@ const Page = () => {
                   formatDate(`${coverPost?.timePublic}`)) ||
                   "31/10/2025"}
               </span>
-              <span className=" text-[1rem] text-[#235B76] underline cursor-pointer hover:opacity-70">
+              <span
+                className=" text-[1rem] text-[#235B76] underline cursor-pointer hover:opacity-70"
+                onClick={() => navigateToPostDetails(router, coverPost?.uuid)}
+              >
                 Xem thêm
               </span>
             </div>
@@ -88,7 +95,8 @@ const Page = () => {
                     alt={post?.title || "No title"}
                     width={468}
                     height={252}
-                    className="w-full h-[252px] object-cover rounded-md"
+                    className="w-full h-[252px] object-cover rounded-md cursor-pointer"
+                    onClick={() => navigateToPostDetails(router, post?.uuid)}
                   />
                 )}
                 <h6 className="text-[1.125rem] text-[#1D1D1D] mt-4 mb-2 line-clamp-2">
@@ -102,7 +110,10 @@ const Page = () => {
                   <span className="text-[#959393] text-[0.875rem]">
                     {post?.timePublic && formatDate(`${post?.timePublic}`)}
                   </span>
-                  <span className=" text-[1rem] text-[#235B76] underline cursor-pointer hover:opacity-70">
+                  <span
+                    className=" text-[1rem] text-[#235B76] underline cursor-pointer hover:opacity-70"
+                    onClick={() => navigateToPostDetails(router, post?.uuid)}
+                  >
                     Xem thêm
                   </span>
                 </div>

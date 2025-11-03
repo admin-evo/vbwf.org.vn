@@ -39,9 +39,9 @@ const pages = [
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#002843] md:pb-0 pb-[20rem]">
+      <div className="bg-[#002843] md:pb-0 pb-[2rem]">
         <div className="lg:px-0 md:mx-56 mx-6">
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-[1.875rem]  py-[3.75rem]">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-[1.875rem] py-[3.75rem]">
             <div>
               <h3 className="text-[#FF9F2C] uppercase text-base border-b border-[#454545] py-3 mb-5">
                 liên đoàn cử tạ thể hình vn
@@ -89,10 +89,10 @@ const Footer = () => {
                     key={index}
                     className="flex flex-row gap-2 items-center mb-2"
                   >
-                    <span className="w-5 flex items-center justify-center">
+                    <span className="md:w-20 w-8 min-w-fit flex items-center justify-center">
                       {item.icon}
                     </span>
-                    <span className="text-xs text-[#8F8F8F] w-52 whitespace-nowrap">
+                    <span className="text-xs text-[#8F8F8F] w-[90vw]">
                       {item.text}
                     </span>
                   </div>
