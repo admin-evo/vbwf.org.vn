@@ -70,14 +70,18 @@ const PrePosts = () => {
           {otherPosts.map((post, index) => (
             <div key={index} className="w-full">
               {post?.imagePath && (
-                <Image
-                  src={getImage(`${post?.imagePath}`)}
-                  alt={post?.title || "No title"}
-                  width={468}
-                  height={252}
-                  className="w-full h-[252px] object-cover rounded-md cursor-pointer"
+                <div
+                  className="w-full aspect-square relative cursor-pointer"
                   onClick={() => navigateToPostDetails(router, post?.uuid)}
-                />
+                  key={index}
+                >
+                  <Image
+                    src={getImage(`${post?.imagePath}`)}
+                    alt={post?.title || "No title"}
+                    fill
+                    className="object-cover rounded-md"
+                  />
+                </div>
               )}
               <h6 className="text-[1.75rem] font-bold text-[#1D1D1D] mt-4 mb-2 line-clamp-2">
                 {post?.title || "Tiêu đề"}

@@ -1,5 +1,5 @@
 "use client";
-import { openZalo } from "@/utils/openZalo";
+import { openRegisterForm } from "@/utils/openRegisterForm";
 import Image from "next/image";
 
 const data = [
@@ -48,7 +48,7 @@ const Pricing = () => {
       <div className="lg:px-0 md:mx-64 mx-6 py-6">
         <h3
           className="text-[#222222] font-bold text-[1.75rem] text-center mb-6"
-          onClick={openZalo}
+          onClick={openRegisterForm}
         >
           Đăng ký gói
         </h3>
@@ -91,7 +91,7 @@ const Pricing = () => {
 
               <button
                 className="bg-[#FF9F2C] rounded-md py-2 px-4 text-white cursor-pointer hover:opacity-75 mt-6 w-fit mx-auto"
-                onClick={openZalo}
+                onClick={openRegisterForm}
               >
                 Đăng ký
               </button>

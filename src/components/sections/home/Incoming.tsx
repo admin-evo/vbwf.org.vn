@@ -1,6 +1,6 @@
 "use client";
 import { CilEducationIcon } from "@/icons";
-import { openZalo } from "@/utils/openZalo";
+import { openRegisterForm } from "@/utils/openRegisterForm";
 
 /* eslint-disable @next/next/no-img-element */
 const Incoming = () => {
@@ -26,7 +26,7 @@ const Incoming = () => {
             </p>
             <div
               className="bg-[#FF9F2C] hover:bg-[#FFB256] w-fit px-4 py-2 rounded-md text-white text-sm cursor-pointer"
-              onClick={openZalo}
+              onClick={openRegisterForm}
             >
               Đăng ký
             </div>

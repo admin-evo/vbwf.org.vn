@@ -7,7 +7,7 @@ const contacts = [
     icon: <HomeGrayIcon />,
   },
   {
-    text: "034 275 3753",
+    text: "034 275 3753 - 0971 090 094",
     icon: <PhoneIcon />,
   },
 

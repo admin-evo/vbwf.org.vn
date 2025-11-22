@@ -4,43 +4,38 @@ import React, { Fragment } from "react";
 const data = [
   {
     id: 1,
-    title: "Tôi có thể xem tại đâu?",
-    content: `Bạn có thể xem tại:
-- Nền tảng chính: website chính thức (www.example.edu.vn) — phát trực tiếp và video theo yêu cầu.
-- Ứng dụng di động: iOS & Android (tìm kiếm "Example Academy").
-- Điểm xem tập trung: Phòng A201, Tầng 2, Trung tâm Đào tạo.
-Lưu ý: Một số buổi có bản quyền giới hạn khu vực.`,
+    title: "Khóa học đang được tuyển sinh là khóa cấp mấy?",
+    content: `Liên đoàn hiện nay đang tổ chức khóa <strong>"Đào tạo người hướng dẫn tập luyện môn Thể hình & Fitness trình độ HLV cấp 2"<strong>
+`,
   },
   {
     id: 2,
-    title: "Thời lượng cho mỗi khoá học?",
-    content: `Thời lượng khoá học:
-- Tổng thời lượng: 24 giờ (8 buổi x 3 giờ).
-- Học trực tiếp: 16 giờ (5 buổi tại trung tâm).
-- Học trực tuyến: 8 giờ (4 buổi livestream + tài liệu tự học).
-Yêu cầu hoàn thành: Tham gia ít nhất 75% buổi và nộp bài tập cuối khoá.`,
+    title: "Tại sao Liên đoàn tổ chức khóa cấp 2 mà không phải là khóa cấp 1?",
+    content: `Vì theo phân cấp của Liên đoàn, Khóa HLV cấp 2 là <strong>khóa học cơ bản, dành cho mọi đối tượng</strong> học viên từ trên 18 tuổi.`,
   },
   {
     id: 3,
-    title: "Hồ sơ đăng ký bao gồm những gì?",
-    content: `Hồ sơ đăng ký gồm:
-- Đơn đăng ký (mẫu của trung tâm).
-- 01 bản sao CMND/CCCD/hộ chiếu.
-- 02 ảnh 3x4 (chụp trong 6 tháng).
-- Bản sao bằng tốt nghiệp (nếu đăng ký học chuyên sâu).
-Ghi chú: Hồ sơ nộp trực tiếp hoặc gửi file scan qua email tuyển sinh.`,
+    title: "Khóa học diễn ra trong bao lâu?",
+    content: `Khóa học sẽ diễn ra trực tiếp trong 7 ngày hoặc theo thông báo của từng lớp`,
   },
   {
     id: 4,
-    title: "Chính sách thanh toán & chính sách hoàn tiền",
+    title: "Hồ sơ tham gia khóa học bao gồm những gì",
     content: `Thanh toán:
-- Học phí: 3.500.000 VNĐ/khóa.
-- Hình thức: Chuyển khoản hoặc đóng trực tiếp tại văn phòng.
-Chính sách hoàn tiền:
-- Huỷ trước 7 ngày: hoàn 100% (khấu trừ phí quản lý 50.000 VNĐ).
-- Huỷ trong vòng 3-7 ngày: hoàn 50%.
-- Sau khi khóa bắt đầu: không hoàn tiền.
-Liên hệ thanh toán: finance@example.edu.vn`,
+👉Hồ sơ tham dự khóa học gồm:
+- Bản đăng ký tham gia khóa học 
+- 02 ảnh 3x4 (ảnh thẻ nền trắng, áo sơ mi trắng)
+- 02 ảnh 4x6 (ảnh thẻ nền trắng, áo sơ mi trắng)
+- Bản photo CCCD (còn hạn sử dụng) không cần công chứng`,
+  },
+  {
+    id: 5,
+    title: "Giá trị của giấy chứng nhận là gì?",
+    content: `Thanh toán:
+GIÁ TRỊ CỦA GIẤY CHỨNG NHẬN KHÓA HLV CẤP II:
+✅ Giấy phép hành nghề DUY NHẤT, có giá trị TOÀN QUỐC
+✅ Giấy chứng nhận hành nghề HLV chuyên nghiệp
+✅ Đủ cơ sở pháp lý để hành nghề và kinh doanh trong lĩnh vực Gym và Fitness`,
   },
 ];
 
@@ -49,7 +44,7 @@ const CommonQuestions = () => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-1 lg:px-0 md:mx-56 mx-6 py-12">
-      <h3 className="font-bold text-[1.75rem]">Câu hỏi thường gặp</h3>
+      <h3 className="font-bold text-[1.75rem] mb-1">Câu hỏi thường gặp</h3>
       <div className="w-full flex flex-col gap-1">
         {data?.map((item, index) => (
           <Fragment key={index}>
@@ -96,9 +91,8 @@ const CommonQuestions = () => {
               className={`${
                 selected?.id !== item?.id && "hidden"
               } p-6 bg-white whitespace-pre-line`}
-            >
-              {item.content}
-            </div>
+              dangerouslySetInnerHTML={{ __html: item.content }}
+            />
           </Fragment>
         ))}
       </div>
