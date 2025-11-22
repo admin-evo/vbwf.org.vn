@@ -1,5 +1,6 @@
 "use client";
 
+import { openRegisterForm } from "@/utils/openRegisterForm";
 import { openZalo } from "@/utils/openZalo";
 import Image from "next/image";
 import React from "react";
@@ -19,7 +20,7 @@ const Banner = () => {
           <div className="flex flex-row gap-3">
             <div
               className="bg-[#FF9F2C] hover:bg-[#FFB256] w-fit px-4 py-2 rounded-md text-white text-sm cursor-pointer"
-              onClick={openZalo}
+              onClick={openRegisterForm}
             >
               Đăng ký ngay
             </div>

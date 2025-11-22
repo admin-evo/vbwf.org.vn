@@ -1,6 +1,8 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
 import IconBox from "@/components/IconBox";
 import { ArrowUpRightIcon, UserIcon } from "@/icons";
+import { openRegisterForm } from "@/utils/openRegisterForm";
 
 const data = [
   { icon: <UserIcon />, label: "Xác minh danh tính" },
@@ -42,11 +44,19 @@ const NFC = () => {
                 className="bg-[#BBD2DD] min-w-[44px] min-h-[44px] size-[44px] rounded-full flex items-center justify-center"
                 icon={item.icon}
               />
-              <p className="text-[#235B76] lg:text-[28px] md:text-[1.5rem] text-[28px] whitespace-nowrap">
+              <p className="text-[#235B76] lg:text-[28px] text-[1.5rem] whitespace-nowrap">
                 {item.label}
               </p>
             </div>
           ))}
+          <div className="flex justify-center">
+            <div
+              className="bg-[#FF9F2C] hover:bg-[#FFB256] w-fit px-4 py-2 rounded-md text-white text-sm cursor-pointer"
+              onClick={openRegisterForm}
+            >
+              Đăng ký
+            </div>
+          </div>
         </div>
       </div>
       <img

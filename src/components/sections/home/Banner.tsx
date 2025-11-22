@@ -6,7 +6,7 @@ const Banner = () => {
     <ImageSlider
       images={[
         "/assets/images/banners/01.png",
-        "/assets/images/banners/01.png",
+        "/assets/images/banners/02.jpg",
       ]}
     />
   );

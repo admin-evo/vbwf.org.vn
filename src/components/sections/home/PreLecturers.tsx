@@ -3,7 +3,7 @@ const lectureres = [
   {
     name: "Nguyễn Hồng Minh",
     pos: "giảng viên",
-    description: "Phó Chủ tịch Liên đoàn Cử tạ, Thể hình Việt Nam",
+    description: "Phó chủ tịch thường trực Liên đoàn Cử tạ, Thể hình Việt Nam",
     src: "/assets/images/pre-lecturers/01.png",
   },
   {
