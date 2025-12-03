@@ -35,14 +35,15 @@ const PrePosts = () => {
       <div className="flex md:flex-row flex-col gap-8">
         <div className="md:w-1/2 w-full">
           {coverPost?.imagePath && (
-            <Image
-              src={getImage(`${coverPost?.imagePath}`)}
-              alt={coverPost?.title || "No title"}
-              width={468}
-              height={252}
-              className="w-full h-[252px] object-cover rounded-md cursor-pointer"
-              onClick={() => navigateToPostDetails(router, coverPost?.uuid)}
-            />
+            <div className="w-full h-[252px] md:h-[500px] relative">
+              <Image
+                src={getImage(`${coverPost?.imagePath}`)}
+                alt={coverPost?.title || "No title"}
+                fill
+                className="object-cover rounded-md cursor-pointer"
+                onClick={() => navigateToPostDetails(router, coverPost?.uuid)}
+              />
+            </div>
           )}
           <h6 className="text-[1.75rem] font-bold text-[#1D1D1D] mt-4 mb-2 line-clamp-2">
             {coverPost?.title || "Tiêu đề"}
@@ -71,9 +72,8 @@ const PrePosts = () => {
             <div key={index} className="w-full">
               {post?.imagePath && (
                 <div
-                  className="w-full aspect-square relative cursor-pointer"
+                  className="w-full h-[252px] md:h-[500px] relative cursor-pointer"
                   onClick={() => navigateToPostDetails(router, post?.uuid)}
-                  key={index}
                 >
                   <Image
                     src={getImage(`${post?.imagePath}`)}
@@ -92,8 +92,7 @@ const PrePosts = () => {
 
               <div className="flex items-center justify-between">
                 <span className="text-[#959393] text-[0.875rem]">
-                  {(coverPost?.timePublic &&
-                    formatDate(`${coverPost?.timePublic}`)) ||
+                  {(post?.timePublic && formatDate(`${post?.timePublic}`)) ||
                     "31/10/2025"}
                 </span>
                 <span

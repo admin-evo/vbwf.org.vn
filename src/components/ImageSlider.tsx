@@ -39,7 +39,7 @@ const ImageSlider = ({ images }: { images: string[] }) => {
             <img
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full md:h-[35rem] h-[11.875rem]"
+              className="w-full md:h-full h-[11.875rem]"
             />
           </div>
         ))}
