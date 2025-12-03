@@ -59,14 +59,16 @@ const PostDetails = (props: Props) => {
       </div>
       <div className="flex flex-col justify-center gap-1 md:mt-1 mt-2">
         {post?.imagePath && (
-          <Image
-            src={getImage(post?.imagePath)}
-            alt={post?.title || "No title"}
-            width={468}
-            height={252}
-            className="w-full h-[504px] object-cover rounded-md"
-          />
+          <div className="w-full relative" style={{ paddingTop: "56.25%" }}>
+            <Image
+              src={getImage(post?.imagePath)}
+              alt={post?.title || "No title"}
+              fill
+              className="object-cover rounded-md cursor-pointer"
+            />
+          </div>
         )}
+
         <h3 className="text-black font-bold text-3xl mt-6 mb-2">
           {post?.title}
         </h3>
