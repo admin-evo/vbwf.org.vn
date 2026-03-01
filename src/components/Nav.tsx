@@ -31,7 +31,7 @@ const NavDesktop = (props: Props) => {
           <div className="flex flex-row items-center justify-center gap-1 px-[1.125rem] cursor-pointer hover:opacity-75 h-full">
             <div
               className={`flex items-center justify-between gap-1 py-2 px-4 ${
-                pathname === item?.path && "bg-[#F1F5F9]"
+                pathname === item?.path && "font-bold"
               }`}
             >
               {item.leftIcon}
