@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const data = [
   {
-    src: "/assets/images/pre-partners/07.png",
+    src: "/assets/images/pre-partners1/07.png",
     width: 112,
     height: 35.84,
   },
   {
-    src: "/assets/images/pre-partners/08.png",
+    src: "/assets/images/pre-partners1/08.png",
     width: 100,
     height: 37,
   },
   {
-    src: "/assets/images/pre-partners/09.png",
+    src: "/assets/images/pre-partners1/09.png",
     width: 100,
     height: 37,
   },
   {
-    src: "/assets/images/pre-partners/10.png",
+    src: "/assets/images/pre-partners1/10.png",
     width: 89.89,
     height: 36.48,
   },
