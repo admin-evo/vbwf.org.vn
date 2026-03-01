@@ -13,10 +13,23 @@ const navItems: NavItem[] = [
   {
     label: "Trang chủ",
     path: pathNames.HOME_PAGE,
+    options: { rightIcon: { hide: true } },
   },
-  { label: "Khoá học", path: pathNames.COURSE_PAGE },
-  { label: "Tin tức", path: pathNames.POSTS_PAGE },
-  { label: "Sản phẩm", path: pathNames.PRODUCTS_PAGE },
+  {
+    label: "Khoá học",
+    path: pathNames.COURSE_PAGE,
+    options: { rightIcon: { hide: true } },
+  },
+  {
+    label: "Tin tức",
+    path: pathNames.POSTS_PAGE,
+    options: { rightIcon: { hide: true } },
+  },
+  {
+    label: "Sản phẩm",
+    path: pathNames.PRODUCTS_PAGE,
+    options: { rightIcon: { hide: true } },
+  },
 ];
 
 const Header = () => {

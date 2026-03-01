@@ -12,7 +12,7 @@ const MainLayout = (props: Props) => {
   const { children } = props;
   return (
     <QueryProvider>
-      <div className="bg-[#f2f2f7]">
+      <div className="bg-white">
         <div className="hidden lg:block">
           <Header />
         </div>
