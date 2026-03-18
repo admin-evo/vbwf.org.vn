@@ -14,7 +14,7 @@ const schema = {
   name: "VBWF - Liên đoàn cử tạ thể hình Việt Nam",
   url: "https://vbwf.org.vn",
   logo: "https://vbwf.org.vn/favicon.ico",
-  telephone: "+0923680808",
+  telephone: "+0971090094",
   address: {
     "@type": "PostalAddress",
     streetAddress:

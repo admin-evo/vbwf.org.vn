@@ -10,7 +10,7 @@ export default function SocialFloatingBar() {
   const socials = [
     {
       id: "facebook",
-      href: "https://www.facebook.com/MofitVietnam",
+      href: "https://www.facebook.com/vbwf.org.vn",
       label: "Facebook",
       bg: "bg-[#1877F2]",
       shadow: "shadow-blue-500/50",
@@ -18,7 +18,7 @@ export default function SocialFloatingBar() {
     },
     {
       id: "zalo",
-      href: "https://zalo.me/0923680808",
+      href: "https://zalo.me/0342753753",
       label: "Zalo",
       bg: "bg-[#0068FF]",
       shadow: "shadow-sky-400/50",
@@ -31,7 +31,7 @@ export default function SocialFloatingBar() {
     },
     {
       id: "phone",
-      href: "tel:0923680808",
+      href: "tel:0971090094",
       label: "Gọi ngay",
       bg: "bg-green-500",
       shadow: "shadow-green-400/50",
