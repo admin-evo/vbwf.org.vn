@@ -1,9 +1,16 @@
 "use client";
 import { CilEducationIcon } from "@/icons";
 import { openRegisterForm } from "@/utils/openRegisterForm";
+import React from "react";
 
 /* eslint-disable @next/next/no-img-element */
 const Incoming = () => {
+  const current_date = React.useMemo(() => {
+    const now = new Date();
+    const month = String(now.getMonth() + 1).padStart(2, "0"); // getMonth() trả về 0-11
+    const year = now.getFullYear();
+    return `${month}/${year}`;
+  }, []);
   return (
     <div className="flex flex-col items-center justify-center h-fit gap-2 mt-8 relative">
       <div className="absolute w-full h-full">
@@ -19,7 +26,7 @@ const Incoming = () => {
           <CilEducationIcon />
           <div className="text-center flex items-center justify-center flex-col mt-2">
             <h3 className="text-white text-lg font-bold">
-              Tuyển sinh tháng 9/2025
+              Tuyển sinh tháng {current_date}
             </h3>
             <p className="text-[#D1D1D6] text-xs mt-1 mb-4">
               Nâng cấp kỹ năng – Học nhanh – Ứng dụng liền
