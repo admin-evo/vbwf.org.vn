@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import MainLayout from "../components/layouts/MainLayout";
 import "./globals.css";
 import SocialFloatingBar from "@/components/SocialFloatingBar";
+import { appConfig } from "@/configs/appConfig";
+import { Fragment } from "react/jsx-runtime";
+import QueryProvider from "@/providers/QueryProvider";
 
 export const metadata: Metadata = {
   title: "VBWF - Liên đoàn cử tạ thể hình Việt Nam",
@@ -29,6 +32,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const Layout = appConfig.isWebsiteBlocked ? QueryProvider : MainLayout;
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -42,8 +47,8 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning>
-        <MainLayout>{children}</MainLayout>
-        <SocialFloatingBar />
+        <Layout>{children}</Layout>
+        {!appConfig.isWebsiteBlocked && <SocialFloatingBar />}
       </body>
     </html>
   );

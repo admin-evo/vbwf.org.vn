@@ -1,4 +1,6 @@
 import PostDetails from "@/components/sections/post-details/PostDetails";
+import { appConfig } from "@/configs/appConfig";
+import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
@@ -6,6 +8,10 @@ export default async function Page({
   params: Promise<{ uuid: string }>;
 }) {
   const { uuid } = await params;
+
+  if (appConfig.isWebsiteBlocked) {
+    notFound();
+  }
 
   return (
     <div className="bg-white">
