@@ -1,6 +1,7 @@
 "use client";
 import Pagination from "@/components/Pagination";
 import ListCategories from "@/components/sections/posts/ListCategories";
+import { appConfig } from "@/configs/appConfig";
 import { QueryParam, QueryValue, useFetch } from "@/hooks/react-query/useFetch";
 import { Post } from "@/types";
 import { apiEndpoints, ITEMS_PER_PAGE } from "@/utils/constants";
@@ -8,7 +9,7 @@ import { formatDate } from "@/utils/formatDate";
 import { getImage } from "@/utils/getImage";
 import { navigateToPostDetails } from "@/utils/navigate";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { notFound, useRouter } from "next/navigation";
 import React from "react";
 
 const Page = () => {
@@ -43,6 +44,10 @@ const Page = () => {
   React.useEffect(() => {
     setPage(1);
   }, [catalogId]);
+
+  if (appConfig.isWebsiteBlocked) {
+    notFound();
+  }
 
   return (
     <div className="bg-white">
