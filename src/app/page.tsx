@@ -5,6 +5,8 @@ import NFC from "@/components/sections/home/NFC";
 import PrePosts from "@/components/sections/home/PrePosts";
 import PreLecturers from "@/components/sections/home/PreLecturers";
 import PrePartner from "@/components/sections/home/PrePartner";
+import { appConfig } from "@/configs/appConfig";
+import { notFound } from "next/navigation";
 
 export const metadata = {
   title: "Xem thông tin liên đoàn cử tạ thể hình việt nam VBWF",
@@ -12,6 +14,9 @@ export const metadata = {
 };
 
 export default function Page() {
+  if (appConfig.isWebsiteBlocked) {
+    notFound();
+  }
   return (
     <div className="flex flex-col bg-white">
       <Banner />

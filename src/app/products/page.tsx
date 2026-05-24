@@ -3,9 +3,14 @@ import Benefit from "@/components/sections/products/Benefit";
 import PrePartner from "@/components/sections/products/PrePartner";
 import Pricing from "@/components/sections/products/Pricing";
 import RegisterProcesses from "@/components/sections/products/RegisterProcesses";
+import { appConfig } from "@/configs/appConfig";
+import { notFound } from "next/navigation";
 import React from "react";
 
 const Page = () => {
+  if (appConfig.isWebsiteBlocked) {
+    notFound();
+  }
   return (
     <div className="min-h-80">
       <Banner />
