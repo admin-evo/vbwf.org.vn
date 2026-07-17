@@ -63,7 +63,7 @@ const HeaderMobile = () => {
             className="cursor-pointer size-[4.375rem]"
           />
         </Link>
-        <IconBox icon={<SearchIcon />} className="cursor-pointer" />
+        {/* <IconBox icon={<SearchIcon />} className="cursor-pointer" /> */}
       </motion.div>
 
       <AnimatePresence>

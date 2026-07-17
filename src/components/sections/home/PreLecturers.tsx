@@ -53,7 +53,7 @@ const PreLecturers = () => {
               />
             </div>
             <div className="mt-5">
-              <h3 className="text-base text-[#333333] text-[1.75rem] font-bold uppercase md:min-h-24">
+              <h3 className="text-[#333333] text-[1.75rem] font-bold uppercase h-21 line-clamp-2">
                 {item.name}
               </h3>
               <p className="uppercase text-[#FF9F2C] text-xs mt-0.5 mb-2">
