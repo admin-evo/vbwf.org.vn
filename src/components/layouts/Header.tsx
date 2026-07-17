@@ -70,7 +70,8 @@ const Header = () => {
         />
       </Link>
       <Nav data={navItems} />
-      <IconBox icon={<SearchIcon />} className="cursor-pointer" />
+      {/* <IconBox icon={<SearchIcon />} className="cursor-pointer" /> */}
+      <div />
     </motion.div>
   );
 };
