@@ -6,45 +6,57 @@ const data = [
   {
     id: 1,
     title: "Thông tin khoá học",
-    content: `Thời gian dự kiến: 04 - 10/08/2025
- Địa điểm học tập: Trường Đại Học Giao thông Vận tải Số 3, Cầu Giấy, Ngọc Khánh, Đống Đa, Hà Nội.
- Người liên hệ:
-    - Lê Thị Thảo - 0342 753 753
-    - Nguyễn Thị Thanh Trúc - 0971 090 094`,
+    content: `Thông tin khoá học gồm:
+- Khóa học offline tổ chức tại: Hà Nội, Đà Nẵng, Hồ Chí Minh
+- Khóa học online: Dành cho học viên trên toàn quốc`,
   },
   {
     id: 2,
     title: "Hồ sơ đăng ký",
-    content: `Hồ sơ gồm có:
-    - Đơn đăng ký học (theo mẫu)
-    - Bản sao công chứng bằng tốt nghiệp
-    - 02 ảnh 3x4 (chụp trong 6 tháng gần nhất)
-Hạn nộp hồ sơ: Trước ngày 01/08/2025`,
+    content: `Hồ sơ đăng ký khóa học bao gồm:
+- Bản đăng ký tham gia khóa học
+- 02 ảnh 3x4 (ảnh thẻ nền trắng, mặc áo sơ mi)
+- 02 ảnh 4x6  (ảnh thẻ nền trắng, mặc áo sơ mi)
+- Bản photo căn cước điện tử trên VNeID`,
   },
   {
     id: 3,
     title: "Nội dung học",
-    content: `Chương trình bao gồm:
-    - Phần 1: Giới thiệu chuyên ngành
-    - Phần 2: Kiến thức thực hành
-    - Phần 3: Bài tập và đồ án cuối khóa`,
+    content: `Nội dung chương trình
+- Lý luận và phương pháp giáo dục thể chất và huấn luyện thể thao;  
+- Cơ sở giải phẫu và sinh lý vận động;  
+- Lý luận và phương pháp Huấn luyện môn Thể hình;  
+- Lý luận và phương pháp Huấn luyện môn Fitness;  
+- Đề phòng chấn thương trong tập luyện;
+- Dinh dưỡng trong tập luyện;
+- Phòng và chống Doping trong luyện tập Thể hình & Fitness
+- Tập luyện bằng phương pháp xung điện (EMS) trong Thể hình & Fitness
+- Quản lý phòng tập, CEO và phương pháp tổ chức kinh doanh ngành Thể hình và Fitnees`,
   },
   {
     id: 4,
     title: "Quyền lợi học viên",
-    content: `Quyền lợi:
-    - Nhận chứng chỉ sau khi hoàn thành khóa học
-    - Hỗ trợ việc làm sau khóa học
-    - Được tham gia các buổi workshop miễn phí`,
+    content: `Quyền lợi học viên
+- Nhận được chứng chỉ HLV cấp 2 cấp có giá trị trên toàn quốc
+- Nhận được giáo trình độc quyền của Liên đoàn
+- Nhận được áo đồng phục thiết kế độc quyền của Liên đoàn
+- Được tham gia các buổi Workshop miễn phí
+- Cơ hội giao lưu học hỏi kinh nghiệm giữa các giảng viên và học viên trong lớp
+`,
   },
   {
     id: 5,
     title: "Học phí",
-    content: `Học phí: 4.500.000 VNĐ / học viên
+    content: `Học phí khóa HLV cấp 2 theo hình thức offline năm 2026 là 8.5tr/bạn (đã bao gồm áo, in bằng và tài liệu) 
+- Không phát sinh chi phí
+- Khóa tự túc chi phí ăn ở.
+Học phí khóa HLV cấp 2 online năm 2026 là 9.5tr/bạn (đã bao gồm áo, in bằng, tài liệu tiền vận chuyển tài liệu giấy chứng nhận, VAT) ạ
+- Không phát sinh chi phí
+- Không bao gồm chi phí vận chuyển hồ sơ từ học viên đến văn phòng
 Hình thức thanh toán:
-    - Chuyển khoản ngân hàng
-    - Thanh toán trực tiếp tại văn phòng
-Lưu ý: Học viên đóng học phí trước khi khai giảng.`,
+- Chuyển khoản ngân hàng
+- Thanh toán trực tiếp tại văn phòng
+Lưu ý: Học viên đóng học phí trước khi hết hạn đăng ký.`,
   },
 ];
 
