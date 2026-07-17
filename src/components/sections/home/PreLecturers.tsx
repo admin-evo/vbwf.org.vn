@@ -20,10 +20,10 @@ const lectureres = [
   //   src: "/assets/images/pre-lecturers/03.png",
   // },
   {
-    name: "Nguyễn Xuân Ninh",
+    name: "Đặng Thanh Hải",
     pos: "giảng viên",
-    description: "Phó Viện trưởng – Viện Y học ứng dụng Việt Nam",
-    src: "/assets/images/pre-lecturers/05.jpg",
+    description: "Trưởng ban truyền thông Liên đoàn Cử tạ, Thể hình Việt Nam",
+    src: "/assets/images/pre-lecturers/06.jpg",
   },
   {
     name: "Bùi Minh Tiến",
@@ -45,11 +45,13 @@ const PreLecturers = () => {
             key={index}
             className="w-full bg-white p-4 md:min-h-[30rem] rounded-md"
           >
-            <img
-              src={item.src}
-              alt={item.name}
-              className="w-full h-[14.375rem] object-cover"
-            />
+            <div className="w-full h-80 overflow-hidden rounded-md">
+              <img
+                src={item.src}
+                alt={item.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="mt-5">
               <h3 className="text-base text-[#333333] text-[1.75rem] font-bold uppercase md:min-h-24">
                 {item.name}
@@ -57,7 +59,7 @@ const PreLecturers = () => {
               <p className="uppercase text-[#FF9F2C] text-xs mt-0.5 mb-2">
                 {item.pos}
               </p>
-              <p className="text-[#696969] text-[1.125rem]">
+              <p className="text-[#696969] text-[1.125rem] line-clamp-3 h-20">
                 {item.description}
               </p>
             </div>
