@@ -45,7 +45,7 @@ const PreLecturers = () => {
             key={index}
             className="w-full bg-white p-4 md:min-h-[30rem] rounded-md"
           >
-            <div className="w-full lg:h-80 h-120 overflow-hidden rounded-md">
+            <div className="w-full lg:h-80 h-[35rem] overflow-hidden rounded-md">
               <img
                 src={item.src}
                 alt={item.name}
