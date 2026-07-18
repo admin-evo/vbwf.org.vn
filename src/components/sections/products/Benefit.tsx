@@ -1,5 +1,6 @@
+"use client";
+import { useDeviceType } from "@/hooks/useDeviceType";
 import Image from "next/image";
-import React from "react";
 
 const data = [
   {
@@ -29,27 +30,37 @@ const data = [
 ];
 
 const Benefit = () => {
+  const deviceType = useDeviceType();
   return (
-    <div className="bg-gradient-to-t from-[#FFFFFF] to-[#9ABBCB] md:bg-gradient-to-t md:from-[#FFFFFF] md:to-[#FFFFFF]">
-      <div className="lg:px-0 md:mx-56 mx-6 py-6">
-        <h3 className="text-[#222222] font-bold text-[1.75rem] text-center mb-6">
+    <div
+      className={
+        deviceType === "mobile"
+          ? "bg-gradient-to-t from-[#FFFFFF] to-[#9ABBCB]"
+          : "bg-white!"
+      }
+    >
+      <div className="mx-6 py-6 md:mx-20 lg:mx-auto lg:max-w-7xl">
+        <h3 className="mb-8 text-center text-[1.75rem] font-bold text-[#222222]">
           Tiện ích dành cho người dùng
         </h3>
-        <div className="grid md:grid-cols-4 grid-cols-1 items-center justify-center md:gap-[1.875rem] gap-6 md:bg-white bg-[rgba(255,255,255,0.45)] rounded-lg">
-          {data?.map((item, index) => (
-            <div key={index} className="md:px-4 px-[34px]">
+
+        <div className="grid grid-cols-1 gap-6 rounded-lg bg-[rgba(255,255,255,0.45)] md:grid-cols-4 md:gap-8 md:bg-white">
+          {data.map((item, index) => (
+            <div key={index} className="h-full px-[34px] md:px-4">
               <div
-                className={`border-b border-b-[#78A5BA] flex flex-col gap-2 items-center justify-center py-[24px] md:border-none ${
-                  index === data.length - 1 && "!border-none"
+                className={`flex h-full flex-col items-center py-6 md:border-none ${
+                  index !== data.length - 1 ? "border-b border-[#78A5BA]" : ""
                 }`}
               >
-                <Image src={item.src} width={66} height={66} alt="logo" />
-                <h3 className="text-[1.75rem] font-bold text-[#235B76]">
-                  {item?.title}
+                <Image src={item.src} width={66} height={66} alt={item.title} />
+
+                <h3 className="mt-4 text-center text-[1.5rem] font-bold text-[#235B76]">
+                  {item.title}
                 </h3>
-                <span className="text-[#8E8E93] text-[0.875rem] text-center">
-                  {item?.description}
-                </span>
+
+                <p className="mt-3 text-center text-[0.875rem] leading-6 text-[#8E8E93]">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}

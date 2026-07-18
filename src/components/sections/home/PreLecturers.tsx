@@ -39,13 +39,13 @@ const PreLecturers = () => {
       <h3 className="text-[#222222] font-bold text-[1.75rem] text-center mb-6">
         Đội ngũ giảng viên
       </h3>
-      <div className="grid md:grid-cols-4 grid-cols-1 items-center justify-center md:gap-[1.875rem] gap-6">
+      <div className="grid lg:grid-cols-4 grid-cols-1 items-center justify-center md:gap-[1.875rem] gap-6">
         {lectureres?.map((item, index) => (
           <div
             key={index}
             className="w-full bg-white p-4 md:min-h-[30rem] rounded-md"
           >
-            <div className="w-full h-80 overflow-hidden rounded-md">
+            <div className="w-full h-100 overflow-hidden rounded-md">
               <img
                 src={item.src}
                 alt={item.name}
@@ -53,7 +53,7 @@ const PreLecturers = () => {
               />
             </div>
             <div className="mt-5">
-              <h3 className="text-[#333333] text-[1.75rem] font-bold uppercase h-21 line-clamp-2">
+              <h3 className="text-[#333333] text-[1.25rem] font-bold uppercase mb-2">
                 {item.name}
               </h3>
               <p className="uppercase text-[#FF9F2C] text-xs mt-0.5 mb-2">
