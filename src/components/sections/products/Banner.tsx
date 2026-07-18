@@ -15,7 +15,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="w-full h-[42rem] bg-gradient-to-b from-[#FFFFFF] to-[#9ABBCB] relative overflow-hidden">
+    <div className="w-full h-[32rem] bg-gradient-to-b from-[#FFFFFF] to-[#9ABBCB] relative overflow-hidden">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10 py-12 lg:py-20 px-6 md:px-10 lg:px-[9.5625rem]">
         {/* Content */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-[540px]">

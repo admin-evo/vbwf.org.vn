@@ -60,7 +60,7 @@ const NFC = () => {
         </div>
       </div>
       <img
-        src="/assets/images/nfc/02.jpg"
+        src="/assets/images/products/card_truoc.png"
         alt="NFC"
         className="h-fit md:w-1/4 w-full rounded-lg"
       />
