@@ -1,9 +1,7 @@
 "use client";
 
-import { openRegisterForm } from "@/utils/openRegisterForm";
 import { openZalo } from "@/utils/openZalo";
 import Image from "next/image";
-import React from "react";
 
 const Banner = () => {
   return (
@@ -14,13 +12,13 @@ const Banner = () => {
             Khóa học HLV Thể hình & Fitness – Cấp 2
           </h3>
           <p className="text-[0.875em] mt-4 mb-3">
-            Đào tạo chuyên sâu, 7 ngày liên tục – chuẩn hóa kỹ năng hướng dẫn
+            Đào tạo chuyên sâu, 8 ngày liên tục – chuẩn hóa kỹ năng hướng dẫn
             tập luyện
           </p>
           <div className="flex flex-row gap-3">
             <div
               className="bg-[#FF9F2C] hover:bg-[#FFB256] w-fit px-4 py-2 rounded-md text-white text-sm cursor-pointer"
-              onClick={openRegisterForm}
+              onClick={openZalo}
             >
               Đăng ký ngay
             </div>

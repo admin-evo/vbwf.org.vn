@@ -9,7 +9,7 @@ const logos = [
   { src: "/assets/images/pre-partners/3.png", alt: "03" },
   { src: "/assets/images/pre-partners/4.png", alt: "04" },
   { src: "/assets/images/pre-partners/5.png", alt: "05" },
-  { src: "/assets/images/pre-partners/6.png", alt: "06" },
+  //{ src: "/assets/images/pre-partners/6.png", alt: "06" },
   { src: "/assets/images/pre-partners/7.png", alt: "07" },
   { src: "/assets/images/pre-partners/8.png", alt: "08" },
   { src: "/assets/images/pre-partners/9.png", alt: "09" },

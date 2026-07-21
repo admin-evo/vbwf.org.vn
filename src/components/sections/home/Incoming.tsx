@@ -1,6 +1,6 @@
 "use client";
 import { CilEducationIcon } from "@/icons";
-import { openRegisterForm } from "@/utils/openRegisterForm";
+import { openZalo } from "@/utils/openZalo";
 import React from "react";
 
 /* eslint-disable @next/next/no-img-element */
@@ -9,7 +9,7 @@ const Incoming = () => {
     const now = new Date();
     const month = String(now.getMonth() + 1).padStart(2, "0"); // getMonth() trả về 0-11
     const year = now.getFullYear();
-    return `${month}/${year}`;
+    return `${year}`;
   }, []);
   return (
     <div className="flex flex-col items-center justify-center h-fit gap-2 mt-8 relative">
@@ -26,14 +26,14 @@ const Incoming = () => {
           <CilEducationIcon />
           <div className="text-center flex items-center justify-center flex-col mt-2">
             <h3 className="text-white text-lg font-bold">
-              Tuyển sinh tháng {current_date}
+              Tuyển sinh {current_date}
             </h3>
             <p className="text-[#D1D1D6] text-xs mt-1 mb-4">
               Nâng cấp kỹ năng – Học nhanh – Ứng dụng liền
             </p>
             <div
               className="bg-[#FF9F2C] hover:bg-[#FFB256] w-fit px-4 py-2 rounded-md text-white text-sm cursor-pointer"
-              onClick={openRegisterForm}
+              onClick={openZalo}
             >
               Đăng ký
             </div>

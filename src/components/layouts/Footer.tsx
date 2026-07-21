@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const contacts = [
   {
-    text: "Số 3A24, Ngõ 385 Hoàng Quốc Việt, Phường Nghĩa Tân, Hanoi, Vietnam",
+    text: "Số 3A24, Ngõ 385 Hoàng Quốc Việt, Phường Nghĩa Đô, Hanoi, Vietnam",
     icon: <HomeGrayIcon />,
   },
   {
@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 grid-cols-1 gap-[1.875rem] py-[3.75rem]">
             <div>
               <h3 className="text-[#FF9F2C] uppercase text-base border-b border-[#454545] py-3 mb-5">
-                liên đoàn cử tạ thể hình vn
+                liên đoàn cử tạ thể hình Việt Nam
               </h3>
               <p className="text-xs text-[#8F8F8F]">
                 Tổ chức chính thức đại diện cho các môn Cử tạ và Thể hình trong
