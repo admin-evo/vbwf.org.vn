@@ -16,7 +16,7 @@ const data = [
   {
     id: 3,
     title: "Khóa học diễn ra trong bao lâu?",
-    content: `Khóa học sẽ diễn ra trực tiếp trong 7 ngày hoặc theo thông báo của từng lớp`,
+    content: `Khóa học sẽ diễn ra trực tiếp trong 8 ngày hoặc theo thông báo của từng lớp`,
   },
   {
     id: 4,

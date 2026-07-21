@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import IconBox from "@/components/IconBox";
 import { ArrowUpRightIcon, UserIcon } from "@/icons";
-import { openRegisterForm } from "@/utils/openRegisterForm";
+import { openZalo } from "@/utils/openZalo";
 
 const data = [
   { icon: <UserIcon />, label: "Xác minh danh tính" },
@@ -52,7 +52,7 @@ const NFC = () => {
           <div className="flex justify-center">
             <div
               className="bg-[#FF9F2C] hover:bg-[#FFB256] w-fit px-4 py-2 rounded-md text-white text-sm cursor-pointer"
-              onClick={openRegisterForm}
+              onClick={openZalo}
             >
               Đăng ký
             </div>

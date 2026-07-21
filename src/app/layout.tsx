@@ -21,7 +21,7 @@ const schema = {
   address: {
     "@type": "PostalAddress",
     streetAddress:
-      "Số 3A24, Ngõ 385 Hoàng Quốc Việt, Phường Nghĩa Tân, Hà Nội, Việt Nam",
+      "Số 3A24, Ngõ 385 Hoàng Quốc Việt, Phường Nghĩa Đô, Hà Nội, Việt Nam",
     addressLocality: "Hà Nội",
     addressCountry: "Việt Nam",
   },
