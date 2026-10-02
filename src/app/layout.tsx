@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import MainLayout from "../components/layouts/MainLayout";
 import "./globals.css";
 import SocialFloatingBar from "@/components/SocialFloatingBar";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { appConfig } from "@/configs/appConfig";
 import { Fragment } from "react/jsx-runtime";
 import QueryProvider from "@/providers/QueryProvider";
@@ -49,6 +50,7 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <Layout>{children}</Layout>
         {!appConfig.isWebsiteBlocked && <SocialFloatingBar />}
+        {!appConfig.isWebsiteBlocked && <ScrollToTopButton />}
       </body>
     </html>
   );
