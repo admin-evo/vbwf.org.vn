@@ -3,7 +3,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const logos = [
+const defaultLogos = [
   { src: "/assets/images/pre-partners/1.png", alt: "01" },
   { src: "/assets/images/pre-partners/2.png", alt: "02" },
   { src: "/assets/images/pre-partners/3.png", alt: "03" },
@@ -15,7 +15,15 @@ const logos = [
   { src: "/assets/images/pre-partners/9.png", alt: "09" },
 ];
 
-const PrePartner = () => {
+type PrePartnerProps = {
+  logos?: { src: string; alt: string }[];
+  className?: string;
+};
+
+const PrePartner = ({
+  logos = defaultLogos,
+  className = "lg:px-0 md:mx-56 mx-6 mb-11 md:mt-20 mt-12",
+}: PrePartnerProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
@@ -89,7 +97,7 @@ const PrePartner = () => {
   }, []);
 
   return (
-    <div className="lg:px-0 md:mx-56 mx-6 mb-11 md:mt-20 mt-12">
+    <div className={className}>
       <h3 className="text-[#222222] font-bold text-[1.75rem] text-center mb-6">
         Đối tác liên kết
       </h3>
