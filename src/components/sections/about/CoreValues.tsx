@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 import { paperSurface } from "./TornEdge";
 
 const data = [
@@ -30,15 +31,22 @@ const data = [
 
 const CoreValues = () => {
   return (
-    <section id="gia-tri" className="relative md:py-24 py-16" style={paperSurface}>
+    <section
+      id="gia-tri"
+      className="relative md:py-24 py-16"
+      style={paperSurface}
+    >
       <div className="lg:mx-56 md:mx-12 mx-6">
         <div className="grid lg:grid-cols-12 grid-cols-1 gap-x-6 gap-y-8 mb-16">
-          <h2 className="lg:col-span-6 md:text-4xl text-[1.75rem] font-bold text-[#235B76]">
+          <Reveal
+            as="h2"
+            className="lg:col-span-6 md:text-4xl text-[1.75rem] font-bold text-[#235B76]"
+          >
             Tầm nhìn
             <br />
             và giá trị cốt lõi
-          </h2>
-          <div className="lg:col-span-6">
+          </Reveal>
+          <Reveal delay={0.15} className="lg:col-span-6">
             <span className="block mb-2 text-sm font-bold text-[#FF9F2C]">
               Tầm nhìn
             </span>
@@ -48,12 +56,17 @@ const CoreValues = () => {
               khoa học và bền vững, từng bước nâng cao vị thế của Cử tạ và Thể
               hình Việt Nam trên trường quốc tế.
             </p>
-          </div>
+          </Reveal>
         </div>
 
         <ul className="grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-8">
           {data.map((item, index) => (
-            <li key={index} className="pt-2 border-t-2 border-[#FF9F2C]">
+            <Reveal
+              as="li"
+              key={index}
+              delay={index * 0.1}
+              className="pt-2 border-t-2 border-[#FF9F2C]"
+            >
               <span className="block mt-4 mb-2 md:text-5xl text-4xl font-bold text-[#FF9F2C]">
                 {`0${index + 1}`}
               </span>
@@ -61,7 +74,7 @@ const CoreValues = () => {
                 {item.title}
               </h3>
               <p className="text-sm text-[#8E8E93]">{item.content}</p>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </div>

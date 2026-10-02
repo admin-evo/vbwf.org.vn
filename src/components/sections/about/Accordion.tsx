@@ -1,4 +1,5 @@
 "use client";
+import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
 
 export type AccordionItem = {
@@ -13,6 +14,7 @@ type Props = {
 
 const Accordion = ({ data, className = "" }: Props) => {
   const [openIndex, setOpenIndex] = React.useState<number | null>(0);
+  const reduceMotion = useReducedMotion();
 
   return (
     <div className={`border-t border-[#D1D1D6] ${className}`}>
@@ -45,13 +47,25 @@ const Accordion = ({ data, className = "" }: Props) => {
                 />
               </svg>
             </button>
-            <div
-              className={`${
-                !isOpen && "hidden"
-              } pb-6 max-w-[68ch] flex flex-col gap-4 text-base text-[#222222]`}
+            {/* Luôn render nội dung (cho SEO), chỉ animate chiều cao khi mở/đóng */}
+            <motion.div
+              initial={false}
+              animate={
+                isOpen
+                  ? { height: "auto", opacity: 1 }
+                  : { height: 0, opacity: 0 }
+              }
+              transition={{
+                duration: reduceMotion ? 0 : 0.35,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="overflow-hidden"
+              aria-hidden={!isOpen}
             >
-              {item.content}
-            </div>
+              <div className="pb-6 max-w-[68ch] flex flex-col gap-4 text-base text-[#222222]">
+                {item.content}
+              </div>
+            </motion.div>
           </div>
         );
       })}

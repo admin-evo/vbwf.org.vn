@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Accordion, { AccordionItem } from "./Accordion";
+import Reveal from "./Reveal";
 import { paperSurface } from "./TornEdge";
 
 const data: AccordionItem[] = [
@@ -8,11 +9,11 @@ const data: AccordionItem[] = [
     content: (
       <p>
         Trước khi Liên đoàn Cử tạ, Thể hình Việt Nam được thành lập, các hoạt
-        động liên quan đến Cử tạ và Thể hình được quản lý trong hệ thống tổ
-        chức thể thao hiện hành. Cùng với sự phát triển nhanh chóng của phong
-        trào tập luyện, hệ thống câu lạc bộ và thành tích thi đấu của vận động
-        viên Việt Nam, yêu cầu về một tổ chức xã hội – nghề nghiệp chuyên trách
-        ngày càng trở nên cần thiết.
+        động liên quan đến Cử tạ và Thể hình được quản lý trong hệ thống tổ chức
+        thể thao hiện hành. Cùng với sự phát triển nhanh chóng của phong trào
+        tập luyện, hệ thống câu lạc bộ và thành tích thi đấu của vận động viên
+        Việt Nam, yêu cầu về một tổ chức xã hội – nghề nghiệp chuyên trách ngày
+        càng trở nên cần thiết.
       </p>
     ),
   },
@@ -33,8 +34,8 @@ const data: AccordionItem[] = [
         </p>
         <p>
           Sự ra đời của Liên đoàn là dấu mốc quan trọng đối với quá trình chuyên
-          nghiệp hóa công tác quản lý, tổ chức và phát triển Cử tạ, Thể hình
-          tại Việt Nam. Theo Cục Thể dục thể thao, Liên đoàn được xác định là tổ
+          nghiệp hóa công tác quản lý, tổ chức và phát triển Cử tạ, Thể hình tại
+          Việt Nam. Theo Cục Thể dục thể thao, Liên đoàn được xác định là tổ
           chức quốc gia đại diện cho các môn Cử tạ và Thể hình Việt Nam trong
           quan hệ với các tổ chức thể thao trong nước và quốc tế theo quy định
           của pháp luật.
@@ -80,16 +81,16 @@ const data: AccordionItem[] = [
           nguồn nhân lực trong lĩnh vực Thể hình và Fitness.
         </p>
         <p>
-          Năm 2023, hoạt động kỷ niệm 30 năm phát triển Thể hình và Fitness
-          Việt Nam đã ghi nhận những đóng góp của nhiều thế hệ vận động viên,
-          huấn luyện viên, trọng tài, cán bộ quản lý và các đơn vị đồng hành
-          đối với sự phát triển của môn thể thao này.
+          Năm 2023, hoạt động kỷ niệm 30 năm phát triển Thể hình và Fitness Việt
+          Nam đã ghi nhận những đóng góp của nhiều thế hệ vận động viên, huấn
+          luyện viên, trọng tài, cán bộ quản lý và các đơn vị đồng hành đối với
+          sự phát triển của môn thể thao này.
         </p>
         <p>
           Ngày nay, Liên đoàn hướng tới xây dựng hệ sinh thái Cử tạ – Thể hình
-          phát triển đồng bộ, trong đó kết nối giữa thể thao thành tích cao,
-          thể thao phong trào, đào tạo chuyên môn, khoa học thể thao và hoạt
-          động xã hội hóa là những yếu tố quan trọng.
+          phát triển đồng bộ, trong đó kết nối giữa thể thao thành tích cao, thể
+          thao phong trào, đào tạo chuyên môn, khoa học thể thao và hoạt động xã
+          hội hóa là những yếu tố quan trọng.
         </p>
       </>
     ),
@@ -98,9 +99,13 @@ const data: AccordionItem[] = [
 
 const History = () => {
   return (
-    <section id="lich-su" className="relative md:py-24 py-16" style={paperSurface}>
+    <section
+      id="lich-su"
+      className="relative md:py-24 py-16"
+      style={paperSurface}
+    >
       <div className="lg:mx-56 md:mx-12 mx-6 grid lg:grid-cols-12 grid-cols-1 gap-x-6 gap-y-8 items-end">
-        <figure className="lg:col-span-5">
+        <Reveal as="figure" className="lg:col-span-5">
           <Image
             src="/assets/images/about/giai-vo-dich-the-hinh-2025.jpg"
             alt="Các đại biểu trên sân khấu Giải Vô địch Thể hình quốc gia năm 2025"
@@ -113,9 +118,9 @@ const History = () => {
             Liên đoàn Cử tạ Thể hình Việt Nam phối hợp với Cục Thể dục Thể thao
             tổ chức giải Vô địch Thể hình quốc gia năm 2025
           </figcaption>
-        </figure>
+        </Reveal>
 
-        <div className="lg:col-start-7 lg:col-span-6">
+        <Reveal delay={0.15} className="lg:col-start-7 lg:col-span-6">
           <h2 className="md:text-4xl text-[1.75rem] font-bold text-[#235B76]">
             Lịch sử hình thành và phát triển
           </h2>
@@ -125,7 +130,7 @@ const History = () => {
             từ phong trào đến thành tích cao.
           </p>
           <Accordion data={data} />
-        </div>
+        </Reveal>
       </div>
     </section>
   );

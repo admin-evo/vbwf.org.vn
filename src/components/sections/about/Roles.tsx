@@ -1,4 +1,5 @@
 import Accordion, { AccordionItem } from "./Accordion";
+import Reveal from "./Reveal";
 import { paperSurface } from "./TornEdge";
 
 const tournaments = [
@@ -118,9 +119,13 @@ const data: AccordionItem[] = [
 
 const Roles = () => {
   return (
-    <section id="vai-tro" className="relative md:py-24 py-16" style={paperSurface}>
+    <section
+      id="vai-tro"
+      className="relative md:py-24 py-16"
+      style={paperSurface}
+    >
       <div className="lg:mx-56 md:mx-12 mx-6 grid lg:grid-cols-12 grid-cols-1 gap-x-6 gap-y-8">
-        <div className="lg:col-span-5 lg:sticky lg:top-32 lg:self-start">
+        <Reveal className="lg:col-span-5 lg:sticky lg:top-32 lg:self-start">
           <h2 className="mb-6 md:text-4xl text-[1.75rem] font-bold text-[#235B76]">
             Vai trò và chức năng của Liên đoàn
           </h2>
@@ -133,8 +138,10 @@ const Roles = () => {
           <p className="max-w-[46ch] mt-6 pt-4 border-t border-[#D1D1D6] text-base font-bold text-[#FF9F2C]">
             Các hoạt động trọng tâm của Liên đoàn bao gồm:
           </p>
-        </div>
-        <Accordion data={data} className="lg:col-start-7 lg:col-span-6" />
+        </Reveal>
+        <Reveal delay={0.15} className="lg:col-start-7 lg:col-span-6">
+          <Accordion data={data} />
+        </Reveal>
       </div>
     </section>
   );

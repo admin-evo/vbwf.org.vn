@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 import { paperSurface } from "./TornEdge";
 
 const data = [
@@ -77,17 +78,28 @@ const Barbell = () => (
 
 const Fields = () => {
   return (
-    <section id="linh-vuc" className="relative md:py-24 py-16" style={paperSurface}>
+    <section
+      id="linh-vuc"
+      className="relative md:py-24 py-16"
+      style={paperSurface}
+    >
       <div className="lg:mx-56 md:mx-12 mx-6">
-        <h2 className="md:text-4xl text-[1.75rem] font-bold text-[#235B76] text-center">
+        <Reveal
+          as="h2"
+          className="md:text-4xl text-[1.75rem] font-bold text-[#235B76] text-center"
+        >
           Các lĩnh vực
           <br />
           hoạt động trọng tâm
-        </h2>
-        <p className="max-w-[600px] mx-auto mt-4 mb-12 text-center text-base text-[#8E8E93]">
+        </Reveal>
+        <Reveal
+          as="p"
+          delay={0.15}
+          className="max-w-[600px] mx-auto mt-4 mb-12 text-center text-base text-[#8E8E93]"
+        >
           Hoạt động của Liên đoàn được triển khai trên nhiều lĩnh vực, hướng tới
           sự phát triển toàn diện của hệ sinh thái Cử tạ và Thể hình Việt Nam:
-        </p>
+        </Reveal>
 
         <div className="relative grid lg:grid-cols-2 grid-cols-1 border border-[#D1D1D6]">
           <Barbell />
@@ -95,8 +107,12 @@ const Fields = () => {
             const isRight = index % 2 === 1;
             const isLastRow = index >= data.length - 2;
             return (
-              <article
+              <Reveal
+                as="article"
                 key={index}
+                x={isRight ? 32 : -32}
+                y={0}
+                delay={Math.floor(index / 2) * 0.12}
                 className={`lg:px-12 md:p-8 px-6 py-8 border-b border-[#D1D1D6] ${
                   index === data.length - 1 ? "border-b-0" : ""
                 } ${isLastRow ? "lg:border-b-0" : ""} ${
@@ -120,7 +136,7 @@ const Fields = () => {
                 >
                   {item.content}
                 </p>
-              </article>
+              </Reveal>
             );
           })}
         </div>

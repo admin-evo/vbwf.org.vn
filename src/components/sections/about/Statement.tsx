@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 import { paperSurface } from "./TornEdge";
 
 const data = [
@@ -18,29 +19,38 @@ const Statement = () => {
     >
       <div className="lg:mx-56 md:mx-12 mx-6">
         <div className="grid lg:grid-cols-12 grid-cols-1 gap-x-6 gap-y-8">
-          <h2 className="lg:col-span-7 md:text-4xl text-[1.75rem] font-bold text-[#235B76]">
+          <Reveal
+            as="h2"
+            className="lg:col-span-7 md:text-4xl text-[1.75rem] font-bold text-[#235B76]"
+          >
             Tổ chức xã hội – nghề nghiệp cấp quốc gia
-          </h2>
-          <p className="lg:col-span-5 text-lg text-[#222222]">
+          </Reveal>
+          <Reveal
+            as="p"
+            delay={0.15}
+            className="lg:col-span-5 text-lg text-[#222222]"
+          >
             Liên đoàn Cử tạ, Thể hình Việt Nam là tổ chức xã hội – nghề nghiệp
             hoạt động trong lĩnh vực Cử tạ và Thể hình tại Việt Nam. Liên đoàn
             có vai trò tập hợp, kết nối các tổ chức, câu lạc bộ, vận động viên,
-            huấn luyện viên, trọng tài, chuyên gia và những người hoạt động,
-            tập luyện, quan tâm đến hai môn thể thao Cử tạ và Thể hình.
-          </p>
+            huấn luyện viên, trọng tài, chuyên gia và những người hoạt động, tập
+            luyện, quan tâm đến hai môn thể thao Cử tạ và Thể hình.
+          </Reveal>
         </div>
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-8 md:mt-20 mt-12">
           {data.map((item, index) => (
-            <p
+            <Reveal
+              as="p"
               key={index}
+              delay={index * 0.15}
               className={`relative pt-6 border-t border-[#D1D1D6] text-base text-[#222222] ${
                 offsets[index]
               } ${index === 2 ? "md:col-span-2 lg:col-span-1" : ""}`}
             >
               <span className="absolute left-0 -top-[5px] size-[9px] rounded-full bg-[#FF9F2C]" />
               {item}
-            </p>
+            </Reveal>
           ))}
         </div>
       </div>
