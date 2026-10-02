@@ -35,11 +35,8 @@ export default function SocialFloatingBar() {
       label: "Gọi ngay",
       bg: "bg-green-500",
       shadow: "shadow-green-400/50",
-      icon: (
-        <div className="size-6 rounded-full">
-          <Phone />
-        </div>
-      ),
+      // Render svg trực tiếp (block) để luôn nằm giữa nút, tránh lệch baseline
+      icon: <Phone className="block size-6" />,
     },
   ];
 
