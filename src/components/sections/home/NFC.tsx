@@ -13,11 +13,12 @@ const data = [
 
 const NFC = () => {
   return (
-    <div className="flex md:flex-row flex-col md:gap-15 gap-6 lg:px-0 md:mx-56 mx-6 md:mt-8 mt-12">
+    <div className="flex md:flex-row flex-col md:items-center md:gap-15 gap-6 lg:px-0 md:mx-56 mx-6 md:mt-8 mt-12 md:mb-12 mb-8">
+      {/* Ảnh gốc có khoảng trắng lớn phía dưới nút đăng ký nên crop bớt phần đáy */}
       <img
         src="/assets/images/nfc/01.png"
         alt="NFC"
-        className="h-fit md:w-1/4 w-full"
+        className="md:w-1/4 w-3/4 max-w-[18rem] mx-auto md:mx-0 aspect-[375/620] object-cover object-top rounded-2xl shadow-lg"
       />
       <div className="w-full">
         <h3 className="text-[#568EA9] md:text-[1.75rem] text-[3rem] font-bold">
@@ -49,7 +50,7 @@ const NFC = () => {
               </p>
             </div>
           ))}
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-4">
             <div
               className="bg-[#FF9F2C] hover:bg-[#FFB256] w-fit px-4 py-2 rounded-md text-white text-sm cursor-pointer"
               onClick={openZalo}

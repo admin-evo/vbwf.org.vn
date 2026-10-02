@@ -1,7 +1,7 @@
 import Banner from "@/components/sections/products/Banner";
 import Benefit from "@/components/sections/products/Benefit";
 import PrePartner from "@/components/sections/products/PrePartner";
-import Pricing from "@/components/sections/products/Pricing";
+// import Pricing from "@/components/sections/products/Pricing";
 import RegisterProcesses from "@/components/sections/products/RegisterProcesses";
 import { appConfig } from "@/configs/appConfig";
 import { notFound } from "next/navigation";
@@ -17,7 +17,7 @@ const Page = () => {
       <Benefit />
       <RegisterProcesses />
       <PrePartner />
-      <Pricing />
+      {/* <Pricing /> */}
     </div>
   );
 };

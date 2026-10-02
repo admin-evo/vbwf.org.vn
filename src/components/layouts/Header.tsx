@@ -16,6 +16,11 @@ const navItems: NavItem[] = [
     options: { rightIcon: { hide: true } },
   },
   {
+    label: "Giới thiệu",
+    path: pathNames.ABOUT_PAGE,
+    options: { rightIcon: { hide: true } },
+  },
+  {
     label: "Khoá học",
     path: pathNames.COURSE_PAGE,
     options: { rightIcon: { hide: true } },

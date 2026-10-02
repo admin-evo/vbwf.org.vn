@@ -55,7 +55,7 @@ export default function SocialFloatingBar() {
           100% { transform: scale(1.6); opacity: 0; }
         }
         @keyframes slide-in {
-          from { opacity: 0; transform: translateX(12px); }
+          from { opacity: 0; transform: translateX(-12px); }
           to { opacity: 1; transform: translateX(0); }
         }
         .social-bar {
@@ -69,13 +69,13 @@ export default function SocialFloatingBar() {
         }
       `}</style>
 
-      <section className="fixed bottom-6 right-5 z-50 flex flex-col items-end gap-4 social-bar">
+      <section className="fixed bottom-6 left-5 z-50 flex flex-col items-start gap-4 social-bar">
         {socials.map(({ id, href, label, bg, shadow, icon }) => (
           <div key={id} className="relative flex items-center">
             {hovered === id && (
-              <span className="tooltip-label absolute right-14 bg-gray-900 text-white text-xs font-medium px-2.5 py-1 rounded-lg whitespace-nowrap pointer-events-none select-none shadow-md">
+              <span className="tooltip-label absolute left-14 bg-gray-900 text-white text-xs font-medium px-2.5 py-1 rounded-lg whitespace-nowrap pointer-events-none select-none shadow-md">
                 {label}
-                <span className="absolute right-[-5px] top-1/2 -translate-y-1/2 border-4 border-transparent border-l-gray-900" />
+                <span className="absolute left-[-5px] top-1/2 -translate-y-1/2 border-4 border-transparent border-r-gray-900" />
               </span>
             )}
 

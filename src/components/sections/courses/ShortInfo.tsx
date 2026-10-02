@@ -58,6 +58,16 @@ Hình thức thanh toán:
 - Thanh toán trực tiếp tại văn phòng
 Lưu ý: Học viên đóng học phí trước khi hết hạn đăng ký.`,
   },
+  {
+    id: 6,
+    title: "Hướng dẫn đăng ký",
+    content: `Hướng dẫn đăng ký khóa học
+- Bước 1: Điền đầy đủ thông tin vào bản đăng ký tham gia khóa học.
+- Bước 2: Chuẩn bị đầy đủ hồ sơ đăng ký theo yêu cầu.
+- Bước 3: Gửi hồ sơ đăng ký về văn phòng Liên đoàn hoặc theo hướng dẫn của Ban tổ chức.
+- Bước 4: Thực hiện thanh toán học phí theo hình thức chuyển khoản ngân hàng hoặc thanh toán trực tiếp tại văn phòng.
+- Bước 5: Sau khi hoàn tất đăng ký và thanh toán, học viên sẽ nhận được thông tin xác nhận và hướng dẫn tham gia khóa học.`,
+  },
 ];
 
 const ShortInfo = () => {
@@ -73,7 +83,9 @@ const ShortInfo = () => {
                   item.id === selectedInfo?.id && "!text-[#568EA9]"
                 }`}
                 onClick={() => {
-                  setSelectedInfo(item);
+                  setSelectedInfo(
+                    item.id === selectedInfo?.id ? null : item
+                  );
                 }}
               >
                 {item.title}
@@ -95,9 +107,11 @@ const ShortInfo = () => {
             </div>
           ))}
         </div>
-        <div className="md:w-[72%] w-full md:block hidden bg-white h-fit p-4 text-base whitespace-pre-line">
-          {selectedInfo?.content}
-        </div>
+        {selectedInfo && (
+          <div className="md:w-[72%] w-full md:block hidden bg-white h-fit p-4 text-base whitespace-pre-line">
+            {selectedInfo.content}
+          </div>
+        )}
       </div>
     </div>
   );
