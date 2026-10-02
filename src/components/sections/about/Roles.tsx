@@ -40,7 +40,7 @@ const data: AccordionItem[] = [
           {tournaments.map((item, index) => (
             <li
               key={index}
-              className="px-4 py-2 rounded-full border border-[#D1D1D6] bg-[#F2F2F7] text-sm"
+              className="px-4 py-2 rounded-full border border-[#D1D1D6] bg-[#F2F2F7] text-base"
             >
               {item}
             </li>

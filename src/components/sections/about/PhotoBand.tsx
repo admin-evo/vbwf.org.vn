@@ -21,7 +21,7 @@ const PhotoBand = () => {
         as="p"
         x={-24}
         y={0}
-        className="hidden sm:block absolute z-[5] lg:left-56 md:left-12 left-6 bottom-[calc(clamp(22px,3.4vw,52px)+1rem)] max-w-[440px] pl-3 border-l-2 border-[#FF9F2C] text-xs text-white"
+        className="hidden sm:block absolute z-[5] lg:left-56 md:left-12 left-6 bottom-[calc(clamp(22px,3.4vw,52px)+1rem)] max-w-[440px] pl-3 border-l-2 border-[#FF9F2C] text-base text-white"
       >
         Liên đoàn Cử tạ Thể hình Việt Nam phối hợp với Công Ty Evo Việt Nam tổ
         chức khóa HLV Thể hình & Fitness cấp 2

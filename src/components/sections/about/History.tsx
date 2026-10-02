@@ -20,7 +20,7 @@ const data: AccordionItem[] = [
   {
     title: (
       <>
-        <span className="mr-3 text-sm text-[#FF9F2C]">25/9/2015</span>
+        <span className="mr-3 text-base text-[#FF9F2C]">25/9/2015</span>
         Đại hội thành lập Liên đoàn
       </>
     ),
@@ -114,7 +114,7 @@ const History = () => {
             sizes="(min-width: 1024px) 40vw, 100vw"
             className="w-full aspect-[4/5] object-cover object-[50%_58%]"
           />
-          <figcaption className="mt-3 max-w-[52ch] text-xs text-[#8E8E93]">
+          <figcaption className="mt-3 max-w-[52ch] text-base text-[#8E8E93]">
             Liên đoàn Cử tạ Thể hình Việt Nam phối hợp với Cục Thể dục Thể thao
             tổ chức giải Vô địch Thể hình quốc gia năm 2025
           </figcaption>

@@ -28,7 +28,7 @@ const Finale = () => {
       <div className="relative z-[2] lg:mx-56 md:mx-12 mx-6 flex flex-col items-center text-center">
         <Reveal
           as="h2"
-          className="max-w-[20em] md:text-5xl text-4xl font-bold leading-tight"
+          className="max-w-[20em] md:text-4xl text-[1.75rem] font-bold leading-tight"
         >
           Đồng hành cùng cộng đồng <br className="hidden md:block" />
           Cử tạ và Thể hình Việt Nam
@@ -57,7 +57,7 @@ const Finale = () => {
               as="p"
               key={index}
               delay={index * 0.15}
-              className={`py-6 border-b border-white/20 md:text-[1.75rem] text-[1.375rem] font-bold ${
+              className={`py-6 border-b border-white/20 text-lg font-bold ${
                 index === verses.length - 1 ? "text-[#FFC580]" : ""
               }`}
             >

@@ -120,17 +120,17 @@ const Fields = () => {
                 }`}
               >
                 <h3
-                  className={`max-w-[16em] mb-2 text-[1.375rem] font-bold text-[#222222] ${
+                  className={`max-w-[16em] mb-2 text-lg font-bold text-[#222222] ${
                     isRight ? "lg:ml-auto" : ""
                   }`}
                 >
-                  <span className="block mb-2 text-xs text-[#FF9F2C]">
+                  <span className="block mb-2 text-base text-[#FF9F2C]">
                     {`0${index + 1}`}
                   </span>
                   {item.title}
                 </h3>
                 <p
-                  className={`max-w-[34ch] text-sm text-[#8E8E93] ${
+                  className={`max-w-[34ch] text-base text-[#8E8E93] ${
                     isRight ? "lg:ml-auto" : ""
                   }`}
                 >
