@@ -23,7 +23,7 @@ const Mission = () => {
           as="h2"
           x={-32}
           y={0}
-          className="lg:col-span-5 md:text-5xl text-4xl font-bold leading-tight [text-shadow:0_2px_24px_rgba(51,0,0,.4)]"
+          className="lg:col-span-5 md:text-4xl text-[1.75rem] font-bold leading-tight [text-shadow:0_2px_24px_rgba(51,0,0,.4)]"
         >
           Sứ mệnh
           <br />

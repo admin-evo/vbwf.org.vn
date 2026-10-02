@@ -31,7 +31,7 @@ const Hero = () => {
         <Reveal
           as="h1"
           delay={0.2}
-          className="md:text-5xl text-4xl font-bold leading-tight [text-shadow:0_2px_32px_rgba(0,16,32,.45)]"
+          className="md:text-4xl text-[1.75rem] font-bold leading-tight [text-shadow:0_2px_32px_rgba(0,16,32,.45)]"
         >
           Chung tay phát triển <br className="hidden md:block" />
           Cử tạ và Thể hình Việt Nam
@@ -43,7 +43,7 @@ const Hero = () => {
           as="a"
           delay={0.6}
           href="#gioi-thieu"
-          className="mt-8 bg-[#FF9F2C] hover:bg-[#FFB256] w-fit px-4 py-2 rounded-md text-white text-sm"
+          className="mt-8 bg-[#FF9F2C] hover:bg-[#FFB256] w-fit px-4 py-2 rounded-md text-white text-base"
         >
           Tìm hiểu về Liên đoàn
         </Reveal>

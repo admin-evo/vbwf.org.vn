@@ -47,7 +47,7 @@ const CoreValues = () => {
             và giá trị cốt lõi
           </Reveal>
           <Reveal delay={0.15} className="lg:col-span-6">
-            <span className="block mb-2 text-sm font-bold text-[#FF9F2C]">
+            <span className="block mb-2 text-base font-bold text-[#FF9F2C]">
               Tầm nhìn
             </span>
             <p className="max-w-[52ch] text-lg text-[#222222]">
@@ -67,13 +67,13 @@ const CoreValues = () => {
               delay={index * 0.1}
               className="pt-2 border-t-2 border-[#FF9F2C]"
             >
-              <span className="block mt-4 mb-2 md:text-5xl text-4xl font-bold text-[#FF9F2C]">
+              <span className="block mt-4 mb-2 md:text-4xl text-[1.75rem] font-bold text-[#FF9F2C]">
                 {`0${index + 1}`}
               </span>
-              <h3 className="mb-2 text-[1.375rem] font-bold text-[#222222]">
+              <h3 className="mb-2 text-lg font-bold text-[#222222]">
                 {item.title}
               </h3>
-              <p className="text-sm text-[#8E8E93]">{item.content}</p>
+              <p className="text-base text-[#8E8E93]">{item.content}</p>
             </Reveal>
           ))}
         </ul>

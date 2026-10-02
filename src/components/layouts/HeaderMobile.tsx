@@ -1,5 +1,5 @@
 "use client";
-import { ArrowDownIcon, CloseIcon, NavIcon, SearchIcon } from "@/icons";
+import { CloseIcon, NavIcon, SearchIcon } from "@/icons";
 import { pathNames } from "@/utils/pathNames";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import Link from "next/link";
@@ -93,7 +93,12 @@ const HeaderMobile = () => {
 
               <nav className="flex flex-col space-y-4 ">
                 {navItems.map((item, index) => (
-                  <Link key={index} href={item.path} className={`h-full`}>
+                  <Link
+                    key={index}
+                    href={item.path}
+                    className={`h-full`}
+                    onClick={() => setShowNav(false)}
+                  >
                     <div className="flex flex-row items-center justify-between cursor-pointer hover:opacity-75 h-full py-1">
                       <div className="flex flex-row gap-1">
                         {item.leftIcon}
@@ -105,11 +110,6 @@ const HeaderMobile = () => {
                           {item.label}
                         </p>
                       </div>
-                      <ArrowDownIcon
-                        className={`transition-transform duration-300 ${
-                          pathname === item?.path ? "rotate-180" : "rotate-0"
-                        }`}
-                      />
                     </div>
                   </Link>
                 ))}
