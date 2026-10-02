@@ -1,5 +1,5 @@
 "use client";
-import { ArrowDownIcon, CloseIcon, NavIcon, SearchIcon } from "@/icons";
+import { CloseIcon, NavIcon, SearchIcon } from "@/icons";
 import { pathNames } from "@/utils/pathNames";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import Link from "next/link";
@@ -110,11 +110,6 @@ const HeaderMobile = () => {
                           {item.label}
                         </p>
                       </div>
-                      <ArrowDownIcon
-                        className={`transition-transform duration-300 ${
-                          pathname === item?.path ? "rotate-180" : "rotate-0"
-                        }`}
-                      />
                     </div>
                   </Link>
                 ))}
