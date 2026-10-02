@@ -14,6 +14,7 @@ const navItems: NavItem[] = [
     label: "Trang chủ",
     path: pathNames.HOME_PAGE,
   },
+  { label: "Giới thiệu", path: pathNames.ABOUT_PAGE },
   { label: "Khoá học", path: pathNames.COURSE_PAGE },
   { label: "Tin tức", path: pathNames.POSTS_PAGE },
   { label: "Sản phẩm", path: pathNames.PRODUCTS_PAGE },

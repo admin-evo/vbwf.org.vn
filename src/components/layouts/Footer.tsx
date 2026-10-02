@@ -23,6 +23,10 @@ const pages = [
     href: "/",
   },
   {
+    text: "Giới thiệu",
+    href: "/about",
+  },
+  {
     text: "Khoá học",
     href: "/courses",
   },
