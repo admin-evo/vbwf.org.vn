@@ -21,8 +21,7 @@ const data = [
   {
     id: 4,
     title: "Hồ sơ tham gia khóa học bao gồm những gì",
-    content: `Thanh toán:
-👉Hồ sơ tham dự khóa học gồm:
+    content: `Hồ sơ tham dự khóa học gồm:
 - Bản đăng ký tham gia khóa học 
 - 02 ảnh 3x4 (ảnh thẻ nền trắng, áo sơ mi trắng)
 - 02 ảnh 4x6 (ảnh thẻ nền trắng, áo sơ mi trắng)
@@ -31,11 +30,10 @@ const data = [
   {
     id: 5,
     title: "Giá trị của giấy chứng nhận là gì?",
-    content: `Thanh toán:
-GIÁ TRỊ CỦA GIẤY CHỨNG NHẬN KHÓA HLV CẤP II:
-✅ Giấy phép hành nghề DUY NHẤT, có giá trị TOÀN QUỐC
-✅ Giấy chứng nhận hành nghề HLV chuyên nghiệp
-✅ Đủ cơ sở pháp lý để hành nghề và kinh doanh trong lĩnh vực Gym và Fitness`,
+    content: `<strong>GIÁ TRỊ CỦA GIẤY CHỨNG NHẬN KHÓA HLV CẤP II:</strong>
+– Giấy phép hành nghề DUY NHẤT, có giá trị TOÀN QUỐC
+– Giấy chứng nhận hành nghề HLV chuyên nghiệp
+– Đủ cơ sở pháp lý để hành nghề và kinh doanh trong lĩnh vực Gym và Fitness`,
   },
 ];
 
